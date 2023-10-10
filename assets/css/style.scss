@@ -12,7 +12,7 @@ header {
   right:0;
   width: 100%;
   text-align: center;
-  background: url(../images/soc_icon_long.jpg) #81e7f0;
+  background: url(../images/soc_icon_long.jpg) center center no-repeat #81e7f0;
   box-shadow: 1px 0px 2px rgba(0,0,0,.75);
   z-index:99;
   -webkit-font-smoothing:antialiased;
@@ -67,7 +67,26 @@ section {
     margin-top: 190px;
     position: relative;
     background: #fbfbfb;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 1px solid #cbcbcb;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.09),inset 0px 0px 2px 2px rgba(255,255,255,0.5),inset 0 0 5px 5px rgba(255,255,255,0.4);
 }
+
+/* TODO: check all device
+nav {
+    width: 230px;
+    position: fixed;
+    top: 220px;
+    left: 80%;
+    text-align: left;
+}
+
+footer {
+    width: 180px;
+    position: fixed;
+    left: 82%;
+    bottom: 20px;
+    text-align: left;
+    line-height: 16px;
+}
+*/
