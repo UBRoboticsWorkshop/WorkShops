@@ -4,11 +4,11 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=IDd66900StNSm0KR&amp;list=PLkHek7ZiQ1lMAbWlDHLsYCTwgSMA--XaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 1. Save And Import 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8OIQU_GrG-s?si=HaoUaSb4ia84N3Du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 One of the most effective methods to create a robot frame is to make models of each component, then position them in your CAD software. This allows for easy construction of structure, using the models to generate interfaces. 
 
 ## 2. Position Parts 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5J_Dr3YX3OU?si=Mq_t82H2p2sShoLt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Hide parts in order to make sure they don’t get in the way of what you’re working on by clicking the “eye” symbol. The isolate tool, found by right clicking a part, can hide everything except that part too.  
 
 Select the move tool, and make sure to use the “component” mode. The move tool is very versatile, and can position sketch objects, bodies, component and faces. Here, using component mode makes sure that a body is not accidentally disjointed from others in the same component. 
@@ -20,7 +20,7 @@ When setting pivot, clicking on an arc/circle will select its centre.
 Finally, use the move tool to position the MG996R servo motor. Again, setting pivot can be used to keep the motor’s output shaft central. 
 
 ## 3. Draw Base 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qsoxGKsrJ8c?si=RdBj8p6OfIwwpDmT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Hide the motors, and look at the bottom of the robot. Use new sketch, and select “capture position”. This creates a sketch where components are visible in the positions you moved them to. The camera will move to be perpendicular to the sketch plane. 
 
 Draw a rectangle. Here, I used a three point rectangle but any type could be used. When drawing the bottom line, a faint blue icon is displayed. This is an inferred constraint- Fusion can see that the line is close to orthogonal, and will lock it as such. Here, this is useful but sometimes it can get in the way. If it’s unwanted, just click the icon after the line is drawn and press delete. 
@@ -34,7 +34,7 @@ Press D to use the dimension tool. This tool can also be found under the “crea
 As you’ve added dimensions and constraints, the lines have become black. This means that they’re fully constrained- some people view this as necessary to avoid unexpected behaviour later on, but it’s not mandatory to create a part. 
 
 ## 4. Extrude Base 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cCgHcuK4o28?si=L7P8mOCX5u6lnuVh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 One of the most used tools to create a body from a sketch is the extrude tool. Select the base, but leave the bolt holes of the battery carrier unselected. Drag out the arrow to 6mm- Fusion adjusts increments based on zoom, so finer adjustments can be made by zooming in. Alternatively, type 6mm into the “distance” field. 
 
 This part will be laser cut, so it must stay 2D. 
@@ -42,11 +42,11 @@ This part will be laser cut, so it must stay 2D.
 Finally, rotate the camera to ensure that the clearance between the base and the motors is sufficient. 
 
 ## 5. Draw Motor Mount 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3d6b3hN4p7w?si=TjKpIHkx3MikH3aR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Create a new sketch, this time on the symmetry plane down the middle of the robot. Click the mounting face of the motor, and press P in order to project it onto the sketch plane. As with the base plate, create an L bracket and constrain it to fit the parts. This time, we’ll make use of the colinear constraint, which makes lines lock along the same axis. If a part gets in the way of the sketch, hide it with the browser. You can also make an existing object a construction line by selecting it, then hitting the construction icon. 
 
 ## 6. Create Motor Mount 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kAB2gUaBiuI?si=qeomx9fV14NFjLJ9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Now we’ll make a body from the motor mount. However, the projection lines complicate the extrude. Here, it’s easy to fix but in complex models it can be annoying. We’ll go back into the sketch to make these lines construction, so they won’t affect the extrude. 
 
 Select the extrude, and then set “start” to object. Set the motor face to the offset and extrude 5mm.  
@@ -58,27 +58,29 @@ Extrude again, this time setting “extent” to “to object”. Select the par
 We’ll now use the mirror tool to create a symmetric part, set to join in order to make a single unit. 
 
 ## 7. Draw Skid 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ax8RhjHTac?si=UvWkT57BpzwhM3dx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Create a sketch on the baseplate. Draw a circle for the skid, and a plate around it before adding a construction line to distance it from the edge of the base. Add a second circle to work as a mounting hole, with a construction line to position it. Then use the mirror tool to create a second symmetric mounting hole. 
 
 Make sure the construction lines are constrained as vertical or horizontal, and that they are correctly dimensioned. 
 
 ## 8. Create Skid 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oAGDPxz9Pug?si=SxbANKFeDcNUgMZL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Use an offset again, to draw on the bottom of the base. Set the extrude to “new body” to avoid fusing incorrectly. On the next extrude, we want the pin and plate to fuse but not the base- again, hide the base during this operation. Finally, we’ll use the fillet tool on the bottom of the skid, so that it won’t catch on the floor (as much). 
 
 ## 9. Servo Tabs 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hLYoFuXcJVo?si=mYV8d3ASalxnPzRQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Project the relevant parts of the servo, and draw the outline of a mount. Faces, vertices and edges can all be projected by clicking them and pressing P. 
 
 ## 10. Servo Mount 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IE8Iu-8MiFM?si=cn8plJdxQnwFYldM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Add some blocks with holes to mount the servo tabs, again centring the bolt holes with construction lines. 
 
 ## 11. Base Mounts 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rZymE3rAf0g?si=ihMdaTOgnB4uJXNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Project and construct mounting holes to attach parts to the base using M3 bolts. 
 
+## 12. TimeTrave
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6FvvDsl-n1I?si=X21qAFdNGcvWaRZV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Using Time Travel to Unmake Your Mistakes Before They Ever Happen 
 
 This is a somewhat useful trick. 
@@ -95,14 +97,14 @@ With any issues fixed, roll the timeline back forwards, and it’s like it never
 
 What was this section about again? Anyway. 
 
-## 12. Tolerances 
-
+## 13. Tolerances 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ng8UrblULYY?si=sBvvEWbWTT5V9MfI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 So you’ve printed your part, but it’s not quite right- something doesn’t quite fit, a bolt is too loose or tight etc. While this can be fixed physically with a file or hacksaw or digitally by using the timeline, this can be quite complicated or cause issues in some designs. In these cases, go go gadget press pull. 
 
 The press pull is a contextual tool that can modify tolerances by offsetting faces while preserving features like fillets and chamfers. Here, we’ll use it to adjust the hole sizes on the servo mount to tightly hold an M4 bolt by moving the walls inwards 0.25mm. 
 
-## 13. Reinforcement 
-
+## 14. Reinforcement 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0BEzVnps5Gw?si=D3ci2vWa6Mg8Jxjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 The motor mount is far too weak around the bolts (and in general). We can simply add another extrude to add a little extra material around the holes. 
 
 How strong are my parts? 
