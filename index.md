@@ -1,3 +1,3 @@
 # WorkShops
 
-## 1. [./cad.md](CAD) 
+## 1. [CAD](./cad.md) 
