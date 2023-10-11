@@ -107,11 +107,33 @@ The press pull is a contextual tool that can modify tolerances by offsetting fac
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0BEzVnps5Gw?si=D3ci2vWa6Mg8Jxjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 The motor mount is far too weak around the bolts (and in general). We can simply add another extrude to add a little extra material around the holes. 
 
-How strong are my parts? 
-
-Not very lol. 
-
-The design has a lot of sharp corners, which concentrate stress. These can combine with layer lines and part defects, causing parts to fail under very little loading. Careful consideration must be taken, especially with FDM 3D printing, to minimize this. 
-
-But how weak are they? For students, you can use powerful cloud computing to simulate and generatively design components for free. Whilst a lot of this is far out of scope of this session, especially when it comes to calculating dynamic loading and behaviour of non-isometric materials, you can see here how to add loads and constraints to simulate the forces on the motor bracket. 
-
+## 15.	How strong are my parts?
+### 15A: Not very lol.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GkWsAbYjP2w?si=twZVmdXcVITHD61y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+The design has a lot of sharp corners, which concentrate stress. These can combine with layer lines and part defects, causing parts to fail under very little loading. Careful consideration must be taken, especially with FDM 3D printing, to minimize this.
+### 15B: But how weak are they? For students, you can use powerful cloud computing to simulate and generatively design components for free. Whilst a lot of this is far out of scope of this session, especially when it comes to calculating dynamic loading and behaviour of non-isometric materials, you can see here how to add loads and constraints to simulate the forces on the motor bracket.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b3roq59fNag?si=nQAw5i5kqYvhNDT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+A few ways to easily improve strength:
+•	Bulk up the part: the most obvious option, most parts here could benefit from just being a bit wider/deeper. Saving 3g of plastic won’t win matches if your wheels are no longer connected to your robot
+•	Fillets and chamfers: a gentle curve or small angle doesn’t cause stress to build up as badly as a sharp one, making features much less likely to snap off
+•	Better materials: PLA is very brittle. Polymers like nylon, polycarbonate, ABS and enhanced tough PLA are much less likely to snap suddenly 
+## 16.	Fabrication- 3D printing
+### 16A:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XZ35LbfHFSo?si=jeg3CVB8_ogFqmTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Wheels
+Create a sketch on the end of the wheel shaft, then project the end of the skid. Draw a construction line past the motor to make sure the wheel and the skid are level. Draw a circle from the centre of the shaft, which should have a snap point, and connect it tangentially to the construction line. Next, create an offset by selecting the flattened parts of the shaft and hitting “O”. This way, we can make sure that the wheels fit snugly but aren’t too small. Extrude a collar along the shaft, then extrude the disk to create the wheel. Finally, we’ll add an offset to the screw hole so that it’s easy to secure the wheel.
+Tires
+Create a sketch on the face of the wheel, then hit “O” to create an 8mm offset from the rim. Create two radii and link them with an arc. Hit “T” or select the trim tool to cut the radii down. Now select the circular pattern, and create 4 identical features. We’ll next extrude the tire to 6mm, and the features to 4mm with an offset of 2mm. We can then use the combine tool to cut out the tire from the hub, leaving an interlocking interface.
+Why create this complex structure? This part can be created in one operation using an S5 or S3 dual nozzle 3D printer using TPU and PLA for the tire and the hub respectively. However, TPU will not bond to PLA so if printed without interlocking geometry the tire will simply slip off.
+### 16B:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ywA3E8H6pBs?si=WSrdw_xPYuiIoj6x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+To use the printers in the makerspace, you’ll need a PPMS account and also an STL of the part.
+ Switch to the utilities tab, and select the printer icon in the “make” section. Select the part you want to fabricate, and then hit OK. I have my Fusion linked to a specific slicer, so I have to uncheck a tickbox. You can use 3MF files as well, which carry additional benefits over STLs but may not work on all slicers.
+You can also see the process of loading it into Cura and getting it ready to print. When you get your printer training by booking through PPMS, we’ll go over this in greater depth.
+## 17.	Fabrication- Install shaper Utilities
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qI9KOSoGpUE?si=DZEd_Emh5HLMViKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+To use the laser cutter, you’ll need an SVG file. Fusion doesn’t have a great way to export these, and the export SVG plugin is paid for. To get around this, we’ll use a plug in for the Shaper routing tool. 
+Under the utilities tab, select the Fusion app store under add ins. Search Shaper Utilities, and download it before running the .msi file. Finally, restart fusion 360.
+## 18.	Fabrication- Laser Cutting (Using Shaper)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Gpue-ACcZg?si=urwPnGEHtgsIiQNp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+You should now have a triangular icon available under “Make”. Select the face you want to cut, and hit OK to make an SVG. You can view this file by opening it- the laser cutter will cut along the edges seen in the file. Only flat stuff, and no pocketing on the laser cutter. I tried to pocket on a laser cutter once, and the Mechanical Engineers laughed at me.
