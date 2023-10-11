@@ -2,9 +2,6 @@
 
 <a href="./Parts.zip" download>Download link</a>
 
-## 0. Videos
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=IDd66900StNSm0KR&amp;list=PLkHek7ZiQ1lMAbWlDHLsYCTwgSMA--XaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## 1. Save And Import 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8OIQU_GrG-s?si=HaoUaSb4ia84N3Du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 One of the most effective methods to create a robot frame is to make models of each component, then position them in your CAD software. This allows for easy construction of structure, using the models to generate interfaces. 
