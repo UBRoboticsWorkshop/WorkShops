@@ -135,12 +135,14 @@ The press pull is a contextual tool that can modify tolerances by offsetting fac
 The motor mount is far too weak around the bolts (and in general). We can simply add another extrude to add a little extra material around the holes. 
 
 ## 15.	How strong are my parts?
-* 15A. Not very lol.
+
+### 15A. Not very lol.
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GkWsAbYjP2w?si=twZVmdXcVITHD61y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 The design has a lot of sharp corners, which concentrate stress. These can combine with layer lines and part defects, causing parts to fail under very little loading. Careful consideration must be taken, especially with FDM 3D printing, to minimize this.
-* 15B. But how weak are they?
+
+### 15B. But how weak are they?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b3roq59fNag?si=nQAw5i5kqYvhNDT9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -168,14 +170,14 @@ To use the printers in the makerspace, you’ll need a PPMS account and also an 
  Switch to the utilities tab, and select the printer icon in the “make” section. Select the part you want to fabricate, and then hit OK. I have my Fusion linked to a specific slicer, so I have to uncheck a tickbox. You can use 3MF files as well, which carry additional benefits over STLs but may not work on all slicers.
 You can also see the process of loading it into Cura and getting it ready to print. When you get your printer training by booking through PPMS, we’ll go over this in greater depth.
 
-* 17A.	Fabrication- Install shaper Utilities
+### 17A.	Fabrication- Install shaper Utilities
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qI9KOSoGpUE?si=DZEd_Emh5HLMViKy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 To use the laser cutter, you’ll need an SVG file. Fusion doesn’t have a great way to export these, and the export SVG plugin is paid for. To get around this, we’ll use a plug in for the Shaper routing tool. 
 Under the utilities tab, select the Fusion app store under add ins. Search Shaper Utilities, and download it before running the .msi file. Finally, restart fusion 360.
 
-* 17B.	Fabrication- Laser Cutting (Using Shaper)
+### 17B.	Fabrication- Laser Cutting (Using Shaper)
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1Gpue-ACcZg?si=urwPnGEHtgsIiQNp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
