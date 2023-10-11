@@ -79,7 +79,7 @@ Add some blocks with holes to mount the servo tabs, again centring the bolt hole
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rZymE3rAf0g?si=ihMdaTOgnB4uJXNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Project and construct mounting holes to attach parts to the base using M3 bolts. 
 
-## 12. TimeTrave
+## 12. TimeTravel
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6FvvDsl-n1I?si=X21qAFdNGcvWaRZV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 Using Time Travel to Unmake Your Mistakes Before They Ever Happen 
 
@@ -114,3 +114,4 @@ Not very lol.
 The design has a lot of sharp corners, which concentrate stress. These can combine with layer lines and part defects, causing parts to fail under very little loading. Careful consideration must be taken, especially with FDM 3D printing, to minimize this. 
 
 But how weak are they? For students, you can use powerful cloud computing to simulate and generatively design components for free. Whilst a lot of this is far out of scope of this session, especially when it comes to calculating dynamic loading and behaviour of non-isometric materials, you can see here how to add loads and constraints to simulate the forces on the motor bracket. 
+
