@@ -1,6 +1,6 @@
 # CAD 
 
-<a href="./Parts.zip" download>Download link</a>
+<a href="./Parts.zip" download>Download link: parts.zip</a>
 
 ## 1. Save And Import 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8OIQU_GrG-s?si=HaoUaSb4ia84N3Du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
