@@ -374,7 +374,7 @@ table {
 }
 
 body {
-    font: 14px/22px 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 14px/22px Arial,'Quattrocento Sans', "Helvetica Neue", Helvetica, sans-serif;
     color: #2b2b2b;
     font-weight: 300;
     margin: 0px;
@@ -513,11 +513,11 @@ td:first-child {
 }
 
 hr {
+    border-radius: 2px;
     border: 0;
-    outline: none;
-    height: 11px;
-    background: transparent url("../images/hr.gif") center center repeat-x;
-    margin: 0 0 20px
+    height: 4px;
+    background: #81e7f0;
+    margin: 0 0 20px;
 }
 
 dt {
@@ -884,8 +884,8 @@ header p {
 
 p {
     font-size: large;
-    margin: 2% 0% 2% 0%;
-    text-align: justify
+    margin: 10px 0% 10px 0%;
+    text-align: justify;
 }
 
 
