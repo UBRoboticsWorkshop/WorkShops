@@ -75,6 +75,45 @@ section {
     box-shadow: 0px 1px 2px rgba(0,0,0,0.09),inset 0px 0px 2px 2px rgba(255,255,255,0.5),inset 0 0 5px 5px rgba(255,255,255,0.4);
 }
 
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+
 /* TODO: check all device
 nav {
     width: 230px;
