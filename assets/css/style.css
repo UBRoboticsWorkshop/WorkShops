@@ -640,10 +640,10 @@ small {
 }
 
 nav {
-    width: max-content;
+    width: 16%;
     position: fixed;
     top: 220px;
-    right: 25px;
+    right: 2%;
     text-align: left;
 }
 
@@ -907,9 +907,9 @@ p {
 }
 
 section {
-    width: 70%;
+    width: auto;
     padding: 30px 30px 50px 30px;
-    margin: 20px 0;
+    margin: 0% 20% 0 3%;
     margin-top: 190px;
     position: relative;
     background: #fbfbfb;
