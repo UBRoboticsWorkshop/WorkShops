@@ -436,9 +436,7 @@ strong {
 }
 
 .wrapper {
-    width: 650px;
-    margin: 0 auto;
-    position: relative
+    width: 100%;
 }
 
 section img {
