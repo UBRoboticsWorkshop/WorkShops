@@ -16,7 +16,25 @@ $(function(){
     });
 });
 
-
+    $(function(){
+        if(!window.collapseHasRun) {
+            window.collapseHasRun = true;
+            $('.hg-article-body h3').each(function(){
+                $(this).nextUntil('h2, h3').wrapAll("<div class='collapse'></div>");
+            });
+            $( ".hg-article-body h3" ).wrap( "<div class='expand'></div>" );
+            
+            $('.expand').next('.collapse').addClass('collapse-indent');
+            $('.expand').find(':header').prepend('<i class="fa fa-plus-circle"></i>');
+            
+            $('.expand').on('click', function(){
+                $(this).find('i').toggleClass('fa-minus-circle').toggleClass('fa-plus-circle');
+                $(this).next('.collapse', ".open").slideUp();
+                $(this).next('.collapse').not(".open").slideDown();
+                $(this).next('.collapse').toggleClass('open');
+            });
+        }
+    });
 
 
 
