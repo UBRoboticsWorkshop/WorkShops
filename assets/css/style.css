@@ -654,12 +654,11 @@ small {
 }
 
 nav {
-    width: 230px;
+    width: max-content;
     position: fixed;
     top: 220px;
-    left: 50%;
-    margin-left: -580px;
-    text-align: right
+    right: 3%;
+    text-align: left;
 }
 
 nav ul {
