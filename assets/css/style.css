@@ -742,12 +742,11 @@ nav ul a:hover {
 }
 
 footer {
-    width: 170px;
+    width: min-content;
     position: fixed;
     right: 25px;
-    /* margin-left: -530px; */
     bottom: 20px;
-    text-align: right;
+    text-align: center;
     line-height: 16px;
 }
 
@@ -799,6 +798,15 @@ footer {
 
     header ul,header p.view {
         position: static
+    }
+    
+    footer {
+        text-align:center;
+        margin: 20px auto;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: auto
     }
 }
 
