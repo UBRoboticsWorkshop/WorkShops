@@ -11,17 +11,16 @@
 
 ![WhatsApp Image 2023-10-18 at 13 29 18](https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/f22a9f6e-fd13-4c0b-ab12-9efbb5c7a08f)
 
-2. It'll then prompt you to search or connect to a device, there should only be one device availabe select it.
+2. It'll then prompt you to search or connect to a device, there should only be one device availabe select it. The application should then take you to a screen like the one shown above.
 
 ![WhatsApp Image 2023-10-18 at 13 29 19](https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/ee66a5d8-f01a-4ee2-a222-eab04aa69e59)
-&#8593 The application should then take you to a screen like the one shown above
 
 3. Press the default button located in the top left corner of the screen, this will clear up an previously set configuration
 
 https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/073db8e7-e66d-4dd9-986e-72c3535ebe6d
 
-On the device itself connect 2 oscilloscope probes, one to channel 1 and the other to the function generator port
-Oscilloscope probes typically consist of an alligator clip (ground) connected to the side, a witch's hat and the main probe itself
+4. On the device itself connect 2 oscilloscope probes, one to channel 1 and the other to the function generator port
+   Oscilloscope probes typically consist of an alligator clip (ground) connected to the side, a witch's hat and the main probe itself
 
 #### Next were going to generate a PWM signal
 
@@ -36,8 +35,12 @@ Oscilloscope probes typically consist of an alligator clip (ground) connected to
 ## Lets get started
 
 Connect the grounds (alligator clips) of the Function generator and channel 1 probes and then connect the probes themself to one another.
-When a signal is put through the function generator, it will now be displayed on the screen through channel 1. <img width="308" alt="Screen Shot 2023-10-18 at 1 35 40 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/92c7b042-ed68-41ad-92e0-78a160f2e3a2">
+When a signal is put through the function generator, it will now be displayed on the screen through channel 1.
+
+<img width="308" alt="Screen Shot 2023-10-18 at 1 35 40 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/92c7b042-ed68-41ad-92e0-78a160f2e3a2">
+
 THESE ARE CROCODILE CLIPS BTW
+
 <img width="115" alt="Screen Shot 2023-10-18 at 1 36 14 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/f384fccc-c4c8-44b8-ae33-a7f9e13ca484">
 
 ### Generating a PWM signal //TRIGGER
@@ -47,19 +50,22 @@ THESE ARE CROCODILE CLIPS BTW
 1. In the Ni Virtual Bench environment find the frequency generator window
 
 2. Press the power button located in the respective window
+
 3. Change signal type to square and have a play around with the different settings
+
    <img width="154" alt="Screen Shot 2023-10-18 at 1 37 56 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/dc67d1b1-faed-496b-8998-fad1e6e97fb2">
 
 4. Change the offset to 2.5 and the amplitude to 5 - What does changing the frequency do? - What does changing the duty cycle do? Spend a maximum of 5 minutes on this
+
    <img width="445" alt="Screen Shot 2023-10-18 at 1 38 33 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/aa7fc944-cad3-4afa-8158-f93a50e1deb7">
 
 Undo the connections that you made in the 'Lets get started section'
 
 ### Controlling a DM996 Servo
 
-1. Get 2 banana plug leads, plug one into the +6V port and the other into ground (make sure the other ends have alligator clips attached)
+1. Get 2 banana plug leads, plug one into the +6V port and the other into ground (make sure the other ends have alligator clips attached). these are banana plugs:
+
    <img width="317" alt="Screen Shot 2023-10-18 at 1 39 07 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/df96c3bc-5391-4ff5-a4eb-19f17807eacf">
-   these are banana plugs
 
 2. Grab 2 male to male jumpers and connect them to the 2 leads
 
