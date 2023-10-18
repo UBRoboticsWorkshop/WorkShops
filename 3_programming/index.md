@@ -9,18 +9,8 @@
 ---
 # 2. Hello word!
 1. what is function
-2. what is
-``` cpp
-void setup() {
-// setup code
-}
-```
-3. what is
-``` cpp
-void loop() {
-// loop code
-}
-```
+2. what is ``` void setup() { // setup } ```
+3. what is ``` void loop() { // loop code } ```
 4. Serial port code
 ``` cpp
 void setup() {
