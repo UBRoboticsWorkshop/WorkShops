@@ -2,7 +2,7 @@
 
 
 ## 1. Week 3: [CAD – Base and frame](./workshop_1_cad/cad.md) 
-## 2. Week 4: Soldering and intro to SMD
+## 2. Week 4: [Soldering and intro to SMD](./workshop_2_soldering/w2solder.md)
 ## 3. Week 5: Servos and actuators
 ## 4. Week 6: Catchup/Questions
 ## 5. Week 7: CAD 2 – Effectors 
