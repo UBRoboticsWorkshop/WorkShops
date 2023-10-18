@@ -78,8 +78,21 @@ Undo the connections that you made in the 'Lets get started section'
 
 ### Controlling a DC Motor using a half bridge
 
-What is a Halfbridge
--blah blah
+#### MOSFETs
+A MOSFET is a type of transistor that allows for the resistance from drain to source to be controlled by the voltage at the gate.
+The gate voltage can be modelled by a capacitor between the gate and the source. When this increases above a certain voltage, for an N channel depletion MOSFET, the resistance with become very high- to all purposes, an open circuit.
+When this voltage is zero, the gate resistance will become quite low. However, unlike the off state, this is not negligible- heat will be generated according to  which with enough current will destroy the MOSFET.
+MOSFETs can be used in states other than off or on, with a significant resistance. However, this is not useful for power electronics since the power dissipated will be massive- like using a large resistor in series with a motor. This is why PWM is used, to minimize time in these regions.
+
+#### Half bridge
+A half bridge is a structure created by joining two MOSFETs, often N channel as these have lower resistance when on, connected in series as shown:
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/f3b67147-8587-4d81-9f2b-f5ca6664c13d)
+
+
+The load pin can be pulled either low or high by activating it’s gate, labelled Low/HighSwitch. This allows for each side of the motor to be disconnected, low or high.
+A dangerous condition known as shoot through can occur if both gates are activated, and as such many drivers implement protections to prevent this.
+
+In practice, to operate a half bridge a gate driver is required. This is because at boot, the load voltage and gate charge on the MOSFETs is unknown. If the load pin is high, then the gate of the MOSFET must be increased to a voltage higher than VCC to shut it off. A gate driver uses a charge pump to boost a capacitor above supply voltage to achieve this. This also means that the gate can be charged very rapidly, by discharging the capacitor into it and minimizing losses in partially conducting states.
 Tools
 Wire
 Wire stripper
