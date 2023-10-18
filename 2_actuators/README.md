@@ -2,22 +2,21 @@
 
 ## Setup
 
-<img width="845" alt="Screenshot 2023-10-18 at 13 28 03" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/a04dae0f-e5e0-4d03-ab2c-8e5dd94de09f">
-<img width="1125" alt="Screenshot 2023-10-18 at 13 28 35" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/c560d327-301c-48ab-a3be-fac3ccab1472">
+<img width="100%" alt="Screenshot 2023-10-18 at 13 28 03" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/a04dae0f-e5e0-4d03-ab2c-8e5dd94de09f">
+<img width="100%" alt="Screenshot 2023-10-18 at 13 28 35" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/c560d327-301c-48ab-a3be-fac3ccab1472">
 
-Below the computer is your VirtualBench, press the power button located in the top left corner
-Then press the Start button on you PCs and open up 'NI VirtualBnech'
+&#8593 Below the computer is your VirtualBench, press the power button located in the top left corner
+
+1. press the Start button on you PCs and open up 'NI VirtualBnech'
 
 ![WhatsApp Image 2023-10-18 at 13 29 18](https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/f22a9f6e-fd13-4c0b-ab12-9efbb5c7a08f)
 
-It'll then prompt you to search or connect to a device, there should only be one device availabe select it.
-
-// Image of main picture
-The application should then take you to a screen like the one shown above
+2. It'll then prompt you to search or connect to a device, there should only be one device availabe select it.
 
 ![WhatsApp Image 2023-10-18 at 13 29 19](https://github.com/UBRoboticsWorkshop/WorkShops/assets/54585720/ee66a5d8-f01a-4ee2-a222-eab04aa69e59)
+&#8593 The application should then take you to a screen like the one shown above
 
-Press the default button located in the top left corner of the screen, this will clear up an previously set configuration
+3. Press the default button located in the top left corner of the screen, this will clear up an previously set configuration
 
 https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/073db8e7-e66d-4dd9-986e-72c3535ebe6d
 
