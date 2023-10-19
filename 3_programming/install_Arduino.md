@@ -3,7 +3,7 @@
 ---
 ## 1. Install Arduino
 There are two versions of the Arduino IDE you can install: Arduino IDE (1) and Arduino 2.0. Arduino 2 is recommended.
-You can download and install Arduino IDE by clicking on the following link: [arduino.cc/en/Main/Software](arduino.cc/en/Main/Software)
+You can download and install Arduino IDE by clicking on the following link: [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software)
 
 ---
 ## 2. [Add ESP32 in Arduino IDE](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html)
