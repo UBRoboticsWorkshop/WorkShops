@@ -4,7 +4,6 @@
 # 0. Intro
 
 <img width="300" height="60" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/espressif-logo.png?resize=300%2C60&amp;quality=100&amp;strip=all&amp;ssl=1">
-<img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-functional-overview.jpg">
 
 ## **what is an ESP32? Why are they so popular?**
 * **Low-cost:** you can get an ESP32 starting at 6, which makes it easily accessible to the general public;
@@ -24,19 +23,34 @@
 
 ---
 # 2. Hello word!
-## 2.1. what is function
-## 2.2. what is `void setup() { // setup }`
-## 2.3. what is `void loop() { // loop code }`
-## 2.4. Serial port code
+## 2.1. Serial port (UART) code
+
+<img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-functional-overview.jpg">
+
+* **image above:** we can communicate with ESP32 through UART. For convenience, the USB to UART bridge is embedded in the board.
+* **Code below:** We can use the Serial [class](https://www.w3schools.com/cpp/cpp_classes.asp) to transfer data between CP and ESP32. Go to File > New Sketch, and copy the following code.
+
 ``` cpp
-void setup() {
-  Serial.begin(115200);
+void setup() { // setup function returns nothing
+  Serial.begin(115200); // call Serial class, begin function. BaudRate 115200
 }
-void loop() {
-  Serial.println("Hi!");
-  delay(5000);
+
+void loop() { // loop function
+  Serial.println("Hi!"); // call Serial class, print line function. Print "Hi!"
+  delay(5000); // delay for 5s
 }
 ```
+## 2.2. Uploading the Code
+- **Select the board you’re using:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
+
+- Go to Tools > Port and select the COM port the ESP32 is connected to.
+
+-  Then, press the upload button and wait for the “Done uploading” message.
+
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
+
+`If you see a lot of dots (…__…__) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.`
 
 ---
 # 3. PWM and GPIOs
