@@ -6,14 +6,14 @@
 <img width="300" height="60" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/espressif-logo.png?resize=300%2C60&amp;quality=100&amp;strip=all&amp;ssl=1">
 
 ## **what is an ESP32? Why are they so popular?**
-* **Low-cost:** you can get an ESP32 starting at 6, which makes it easily accessible to the general public;
-* **Low-power:** the ESP32 consumes very little power compared with other microcontrollers, and it supports low-power mode states like deep sleep to save power;
-* **Wi-Fi capabilities:** the ESP32 can easily connect to a Wi-Fi network to connect to the internet (station mode), or create its own Wi-Fi wireless network (access point mode) so other devices can connect to it—this is essential for IoT and Home Automation projects—you can have multiple devices communicating with each other using their Wi-Fi capabilities;
-* **Bluetooth:** the ESP32 supports Bluetooth classic and Bluetooth Low Energy (BLE)—which is useful for a wide variety of IoT applications;
+* **Low-cost:** You can get an ESP32 starting at 6, which makes it easily accessible to the general public;
+* **Low-power:** The ESP32 consumes very little power compared with other microcontrollers, and it supports low-power mode states like deep sleep to save power;
+* **Wi-Fi capabilities:** The ESP32 can easily connect to a Wi-Fi network to connect to the internet (station mode), or create its own Wi-Fi wireless network (access point mode) so other devices can connect to it—this is essential for IoT and Home Automation projects—you can have multiple devices communicating with each other using their Wi-Fi capabilities;
+* **Bluetooth:** The ESP32 supports Bluetooth classic and Bluetooth Low Energy (BLE)—which is useful for a wide variety of IoT applications;
 * **Dual-core:** most ESP32 are dual-core— they come with 2 Xtensa 32-bit LX6 microprocessors: core 0 and core 1.
-* **Rich peripheral input/output interface—** the ESP32 supports a wide variety of input (read data from the outside world) and output (to send commands/signals to the outside world) peripherals like capacitive touch, ADCs, DACs, UART, SPI, I2C, PWM, and much more.
-* **Compatible with the Arduino “programming language”:** those that are already familiar with programming the Arduino board, you’ll be happy to know that they can program the ESP32 in the Arduino style.
-* **Compatible with MicroPython:** you can program the ESP32 with MicroPython firmware, which is a re-implementation of Python 3 targeted for microcontrollers and embedded systems.
+* **Rich peripheral input/output interface—** The ESP32 supports a wide variety of input (read data from the outside world) and output (to send commands/signals to the outside world) peripherals like capacitive touch, ADCs, DACs, UART, SPI, I2C, PWM, and much more.
+* **Compatible with the Arduino “programming language”:** Those who are already familiar with programming the Arduino board, ’ll be happy to know that they can program the ESP32 in the Arduino style.
+* **Compatible with MicroPython:** You can program the ESP32 with MicroPython firmware, which is a re-implementation of Python 3 targeted for microcontrollers and embedded systems.
 
 ---
 # 1. Setup
