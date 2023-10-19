@@ -46,11 +46,13 @@ void loop() { // loop function
 
 - Go to Tools > Port and select the COM port the ESP32 is connected to.
 
--  Then, press the upload button and wait for the “Done uploading” message.
+- Then, press the upload button and wait for the “Done uploading” message.
 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
 
 `If you see a lot of dots (…__…__) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.`
+
+## 2.3. Now Go to Tools > Serial Monitor to check the message send form ESP32
 
 ---
 # 3. PWM and GPIOs
@@ -60,11 +62,11 @@ void loop() { // loop function
 
 ## 3.1.2. [Definition of PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation)
 
-## 3.2.1. Application: Servos (PWM)
+## 3.2.1. Application: [Servo motor](https://www.youtube.com/watch?v=tHOH-bYjR4k) sweep
 
-## 3.2.2. Application: Servos with a GPIO as an input 
+## 3.2.2. Advanced Application: Drive Servos with a GPIO as an input 
 
-## 3.3. Drive MX1508
+## 3.3. Advanced Application: Drive MX1508
 
 ---
 # 4. What are libraries and how to install them
@@ -74,10 +76,12 @@ void loop() { // loop function
 ## 4.2. Use libraries to set up a WiFi
 
 ---
-# 5. Advanced: Class
+# 5. Advanced:
 
-## 5.1. Advanced: Head files
+## 5.1. Class
 
-## 5.2. Advanced: Write your own libraries
+## 5.2. Advanced: Head files
 
-## 5.3. Advanced: SDK - ESP-IDF
+## 5.3. Advanced: Write your own libraries
+
+## 5.4. Advanced: SDK - ESP-IDF
