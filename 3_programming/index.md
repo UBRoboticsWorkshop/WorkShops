@@ -25,8 +25,8 @@
 ---
 # 2. Hello word!
 ## 2.1. what is function
-## 2.2. what is ` void setup() { // setup } `
-## 2.3. what is ` void loop() { // loop code } `
+## 2.2. what is `void setup() { // setup }`
+## 2.3. what is `void loop() { // loop code }`
 ## 2.4. Serial port code
 ``` cpp
 void setup() {
