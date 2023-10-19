@@ -2,7 +2,9 @@
 
 ---
 # 0. Intro
+
 <img width="300" height="60" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/espressif-logo.png?resize=300%2C60&amp;quality=100&amp;strip=all&amp;ssl=1">
+<img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-functional-overview.jpg">
 
 **what is an ESP32? Why are they so popular?**
 * **Low-cost:** you can get an ESP32 starting at 6, which makes it easily accessible to the general public;
@@ -39,11 +41,16 @@ void loop() {
 ---
 # 3. PWM and GPIOs
 
-# 3.1.1. Application: Servos (PWM)
+## 3.1.1 [ESP32 Pinout](pinout.md): 
+<img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
-# 3.1.2. Application: Servos with a GPIO as an input 
+## 3.1.2. [Definition of PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation)
 
-# 3.2. Drive MX1508
+## 3.2.1. Application: Servos (PWM)
+
+## 3.2.2. Application: Servos with a GPIO as an input 
+
+## 3.3. Drive MX1508
 
 ---
 # 4. What are libraries and how to install them
