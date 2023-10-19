@@ -1,4 +1,4 @@
-# UBRobotics Workshops 2023/24
+# [UBRobotics Workshops 2023/24](https://ubroboticsworkshop.github.io/WorkShops/)
 
 - Week 3: [CAD](1_cad/README.md)
 - Week 4: [Intro to Actuators](2_actuators/README.md)
