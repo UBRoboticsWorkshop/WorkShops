@@ -130,7 +130,7 @@ void loop() {
 - **open the example**
 - **Upload and test**
 
-## 4.2. Use libraries to set up a WiFi / AP
+## 4.2. Use libraries to set up a WiFi / AP (ESP32 only supports 2.4GHz WiFi.)
 - **WiFi:**
 ```cpp
 #include <WiFi.h>
