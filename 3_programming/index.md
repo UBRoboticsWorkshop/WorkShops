@@ -20,8 +20,8 @@
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-functional-overview.jpg">
 
-> we can communicate with ESP32 through UART. For convenience, the USB to UART bridge is embedded in the board.
-* **Code:** We can use the Serial [class](https://www.w3schools.com/cpp/cpp_classes.asp) to transfer data between PC and ESP32. Go to `File` > `New Sketch`, and copy the following code:
+> we can communicate with ESP32 through UART.
+* **Code:** Go to `File` > `New Sketch`, and copy the following code:
 
 ``` cpp
 void setup() { // setup function returns nothing
