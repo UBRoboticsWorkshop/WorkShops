@@ -31,7 +31,7 @@
 
 ---
 ### J3
-| No. | Name | Type [1]_ | Function                                      |
+| No. | Name | Type [1]_ | Function                                       |
 | --- | ---- | ---------- | --------------------------------------------- |
 | 1   | GND  | G          | Ground                                        |
 | 2   | IO23 | I/O        | GPIO23                                        |
@@ -46,7 +46,7 @@
 | 11  | IO17 | I/O        | GPIO17 [3]_                                   |
 | 12  | IO16 | I/O        | GPIO16 [3]_                                   |
 | 13  | IO4  | I/O        | GPIO4, ADC2_CH0, TOUCH_CH0                    |
-| 14  | IO0  | I/O        | GPIO0, ADC2_CH1, TOUCH_CH1, Boot             |
+| 14  | IO0  | I/O        | GPIO0, ADC2_CH1, TOUCH_CH1, Boot              |
 | 15  | IO2  | I/O        | GPIO2, ADC2_CH2, TOUCH_CH2                    |
 | 16  | IO15 | I/O        | GPIO15, ADC2_CH3, TOUCH_CH3, MTDO             |
 | 17  | D1   | I/O        | GPIO8, D1 [2]_                                |

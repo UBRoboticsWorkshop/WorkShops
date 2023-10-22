@@ -181,8 +181,25 @@ void loop() {
 # 5. Advanced:
 
 ## 5.1. Class
+```cpp
+class class_name {
+public:
+  class_name(uint8_t input_var){
+    _input_var = input_var ++;
+  }
 
+  void foo(){
+    Serial.println(_input_var);
+  }
+private:
+  uint8_t _input_var;
+};
+
+```
 ## 5.2. Head files
+```cpp
+#include "file_name.h"
+```
 
 ## 5.3. Write your own libraries
 
