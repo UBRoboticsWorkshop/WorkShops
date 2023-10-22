@@ -3,7 +3,7 @@
 ---
 # 0. Intro
 
-<img width="300" height="60" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/espressif-logo.png?resize=300%2C60&amp;quality=100&amp;strip=all&amp;ssl=1">
+<img width="300" src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2022/10/espressif-logo.png?resize=300%2C60&amp;quality=100&amp;strip=all&amp;ssl=1">
 
 ## **what is an ESP32? Why are they so popular?**
 * **Low-cost:** You can get an ESP32 starting at 6, which makes it easily accessible to the general public;
@@ -17,9 +17,8 @@
 
 ---
 # 1. Setup
-## 1.1. [Download and install Arduino IDE 2.x](./install_Arduino.md)
-## 1.2. [Add ESP32 Boards](./install_Arduino.md)
-## 1.3. [Install serial port driver](./driver_issue.md)
+## 1.1. [Download and install Arduino IDE 2.x, Add ESP32 Boards](./install_Arduino.md)
+## 1.2. [Install serial port driver](./driver_issue.md)
 
 ---
 # 2. Hello word!
@@ -189,8 +188,8 @@ void loop() {
 
 ## 5.1. Class
 
-## 5.2. Advanced: Head files
+## 5.2. Head files
 
-## 5.3. Advanced: Write your own libraries
+## 5.3. Write your own libraries
 
-## 5.4. Advanced: SDK - ESP-IDF
+## 5.4. SDK - ESP-IDF
