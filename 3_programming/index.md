@@ -110,7 +110,7 @@ void loop() {
 3. In the `loop` function, we sweep the servo motor by incrementing the angle and calculating the corresponding pulse width using `map`. We use `ledcWrite` to set the PWM signal's duty cycle, which controls the servo position. Then, we introduce a `delay` to control the sweep speed.
 
 
-## 3.2.2. Advanced Application: [Control Servos by a input GPIO]()
+## 3.2.2. Advanced Application: [Control Servos by a interrupt](./servo_with_interrupts.md)
 
 ## 3.3. Advanced Application: [Drive MX1508]()
 

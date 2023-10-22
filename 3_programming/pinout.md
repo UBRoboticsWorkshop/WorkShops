@@ -56,3 +56,41 @@
 * [1] P: Power supply; I: Input; O: Output.
 * [2] The pins D0, D1, D2, D3, CMD and CLK are used internally for communication between ESP32 and SPI flash memory. They are grouped on both sides near the USB connector. Avoid using these pins, as it may disrupt access to the SPI flash memory/SPI RAM.
 * [3] The pins GPIO16 and GPIO17 are available for use only on the boards with the modules ESP32-WROOM and ESP32-SOLO-1. The boards with ESP32-WROVER modules have the pins reserved for internal use.
+
+---
+### GPIO
+
+| GPIO  | Input          | Output      | Notes                                                |
+|-------|----------------|-------------|------------------------------------------------------|
+| 0     | pulled up      | OK          | Outputs PWM signal at boot, must be LOW to enter flashing mode |
+| 1     | TX pin         | OK          | Debug output at boot                                |
+| 2     | OK             | OK          | Connected to on-board LED, must be left floating or LOW to enter flashing mode |
+| 3     | OK             | RX pin      | HIGH at boot                                        |
+| 4     | OK             | OK          |                                                    |
+| 5     | OK             | OK          | Outputs PWM signal at boot, strapping pin           |
+| 6     | x              | x           | Connected to the integrated SPI flash              |
+| 7     | x              | x           | Connected to the integrated SPI flash              |
+| 8     | x              | x           | Connected to the integrated SPI flash              |
+| 9     | x              | x           | Connected to the integrated SPI flash              |
+| 10    | x              | x           | Connected to the integrated SPI flash              |
+| 11    | x              | x           | Connected to the integrated SPI flash              |
+| 12    | OK             | OK          | Boot fails if pulled high, strapping pin            |
+| 13    | OK             | OK          |                                                    |
+| 14    | OK             | OK          | Outputs PWM signal at boot                         |
+| 15    | OK             | OK          | Outputs PWM signal at boot, strapping pin           |
+| 16    | OK             | OK          |                                                    |
+| 17    | OK             | OK          |                                                    |
+| 18    | OK             | OK          |                                                    |
+| 19    | OK             | OK          |                                                    |
+| 21    | OK             | OK          |                                                    |
+| 22    | OK             | OK          |                                                    |
+| 23    | OK             | OK          |                                                    |
+| 25    | OK             | OK          |                                                    |
+| 26    | OK             | OK          |                                                    |
+| 27    | OK             | OK          |                                                    |
+| 32    | OK             | OK          |                                                    |
+| 33    | OK             | OK          |                                                    |
+| 34    | OK             | Input only  |                                                    |
+| 35    | OK             | Input only  |                                                    |
+| 36    | OK             | Input only  |                                                    |
+| 39    | OK             | Input only  |                                                    |
