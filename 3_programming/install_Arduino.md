@@ -1,4 +1,4 @@
-# Installing the ESP32 Board and Arduino IDE (Windows, Mac OS X, Linux)
+# Installing the ESP32 Board and Arduino IDE
 
 ---
 # 1. Install Arduino
