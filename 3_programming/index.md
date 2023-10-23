@@ -59,32 +59,25 @@ void loop() { // loop function
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
-## 3.1 Drive a Servo motor to sweep
-> **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
-- Open examples: Go to `Files` > `Examples` > `Servo` > `Sweep`
+## 3.1. Drive MX1508, Using: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
 
-![Alt text](image-6.png)
-
-- connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin9. But pin9 cannot be used, as it connect with SPI Flash. Please change the pin. [ESP32 Pinout](pinout.md))
-> For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
-- Modify the example, Make the Servo Move Between 2 Points. [Answer](./)
-
-## 3.2. Drive MX1508, Using: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
-- Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one.)
+## 3.2. Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one)
 
 ![Alt text](image-5.png)
 
-- Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
+## 3.3. Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
 
 ![Alt text](image-7.png)
 
-- connect the Wire, upload the code. (**In the Example:** Pin9 and Pin10 are used. Please change the pin. [ESP32 Pinout](pinout.md) For connection: [Drive MX1508](./mx1508.md))
-- Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
+## 3.4. Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
+
+## 3.5. Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
 ---
 
-# 4. More about Servos and MX1508
+# 4. More about MX1508 and Servos
 
-## 4.1 Move Between 2 Points without lib
+## 4.1 Move Servos Between 2 Points
+> **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
 - **Go to `File` > `New Sketch`, and copy the following code:**
 ```cpp
 /*
@@ -114,12 +107,16 @@ const int maxPulse = 1638;
 const int servoPin1 = 27;
 const int resolutionPWM = 14;
 
+void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
+  int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
+  ledcWrite(_channel, angleDuty);
+}
+
 void setup() {
   pinMode(27, OUTPUT);
 
   ledcSetup(0, frequency, resolutionPWM); //Here, the zero is which timer we want to use- each servo needs a different timer
   ledcAttachPin(servoPin1, 0);
-
 }
 
 void loop() {
@@ -131,61 +128,15 @@ void loop() {
 
 ```
 - The code configures an Arduino to control a servo motor with a 50Hz signal. It defines the minimum and maximum pulse width values for the servo, maps them to a 14-bit resolution, and assigns a pin (pin 27) for the servo. In the loop function, it moves the servo from 0 to 180 degrees in steps and pauses for 750 milliseconds between movements. The code uses Pulse Width Modulation (PWM) to control the servo's position by varying the duty cycle of the signal sent to the servo.
-
-## 4.2. Servo motor sweep without library
-- **Go to `File` > `New Sketch`, and copy the following code:**
-
-```cpp
-#include <Arduino.h>
-
-const int servoPin = 2;  // GPIO pin where servo is connected
-const int minPulseWidth = 50;  // Minimum pulse width in microseconds
-const int maxPulseWidth = 255;  // Maximum pulse width in microseconds
-const int sweepDelay = 15;  // Delay between each step in milliseconds
-const int minAngle = 0;  // Minimum angle in degrees (usually 0)
-const int maxAngle = 180;  // Maximum angle in degrees (usually 180)
-const int step = 1;  // Step size for the sweep
-
-void setup() {
-  pinMode(servoPin, OUTPUT);
-  ledcSetup(0, 500, 8);  // Configure PWM channel 0, 500 Hz, 8-bit resolution
-  ledcAttachPin(servoPin, 0);  // Attach the PWM channel to the GPIO pin
-}
-
-void loop() {
-  for (int angle = minAngle; angle <= maxAngle; angle += step) {
-    int pulseWidth = map(angle, 0, 180, minPulseWidth, maxPulseWidth);
-    ledcWrite(0, pulseWidth);
-    delay(sweepDelay);
-  }
-
-  for (int angle = maxAngle; angle >= minAngle; angle -= step) {
-    int pulseWidth = map(angle, 0, 180, minPulseWidth, maxPulseWidth);
-    ledcWrite(0, pulseWidth);
-    delay(sweepDelay);
-  }
-}
-
-```
-- **In this code:**
-1. We configure the servo's minimum and maximum pulse width (minPulseWidth and maxPulseWidth) in microseconds, the delay between each step in the sweep (sweepDelay), the minimum and maximum angles (minAngle and maxAngle), and the step size (step).
-2. In the `setup` function, we configure PWM using the `ledcSetup` function, specifying a frequency of 500 Hz and 8-bit resolution. We then attach the PWM channel to the specified GPIO pin using `ledcAttachPin`.
-3. In the `loop` function, we sweep the servo motor by incrementing the angle and calculating the corresponding pulse width using `map`. We use `ledcWrite` to set the PWM signal's duty cycle, which controls the servo position. Then, we introduce a `delay` to control the sweep speed.
+- connect the Servo, upload the code.
+> For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
+- Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
 
 ## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
 
-## 4.3. Advanced: [Drive MX1508](./mx1508.md)
+## 4.3. Advanced: [Drive MX1508 without Lib](./mx1508.md)
 
-## 4.4. Function
-```cpp
-void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
-  int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
-  ledcWrite(_channel, angleDuty);
-}
-
-```
-
-## 4.5. Class
+## 4.4. Class
 ```cpp
 class Servo{
   const int frequency = 50;
