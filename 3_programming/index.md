@@ -75,7 +75,7 @@ void loop() { // loop function
 - connect the Wire, upload the code. (In the Example: Pin9 and Pin10 are used. For wires connection, plz check last workshop)
 ---
 
-# 4. More about Servos
+# 4. More about Servos and MX1508
 
 ## 4.1 Move Between 2 Points without lib
 - **Go to `File` > `New Sketch`, and copy the following code:**
@@ -166,14 +166,10 @@ void loop() {
 3. In the `loop` function, we sweep the servo motor by incrementing the angle and calculating the corresponding pulse width using `map`. We use `ledcWrite` to set the PWM signal's duty cycle, which controls the servo position. Then, we introduce a `delay` to control the sweep speed.
 
 ## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
----
 
-# 5. Advanced Application: [Drive MX1508](./mx1508.md)
----
+## 4.3. Advanced: [Drive MX1508](./mx1508.md)
 
-# 6. Advanced:
-
-## 6.1. Function
+## 4.4. Function
 ```cpp
 void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
   int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
@@ -182,7 +178,7 @@ void writeAngle(int _channel, int _angle){ //Why the underscores? It's just nami
 
 ```
 
-## 6.2. Class
+## 4.5. Class
 ```cpp
 class Servo{
   const int frequency = 50;
@@ -231,7 +227,7 @@ void loop() {
 
 
 ```
-## 6.3. Head files
+## 4.6. Head files
 ```cpp
 #include "file_name.h"
 ```
