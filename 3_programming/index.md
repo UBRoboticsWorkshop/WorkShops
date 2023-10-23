@@ -65,18 +65,19 @@ void loop() { // loop function
 ![Alt text](image-6.png)
 - connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin 9.)
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
+- Modify the example, Make the Servo Move Between 2 Points. [Answer](./)
 
 ## 3.2. Drive MX1508, Using: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
 - Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one.)
 ![Alt text](image-5.png)
 - Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
 ![Alt text](image-7.png)
-- connect the Wire, upload the code. (In the Example: Pin9 and Pin10 are used. For detialed connection, plz check last workshop)
+- connect the Wire, upload the code. (In the Example: Pin9 and Pin10 are used. For wires connection, plz check last workshop)
 ---
 
 # 4. More about Servos
 
-## 4.1 Move Between 2 Points
+## 4.1 Move Between 2 Points without lib
 - **Go to `File` > `New Sketch`, and copy the following code:**
 ```cpp
 /*
@@ -160,16 +161,11 @@ void loop() {
 
 ```
 - **In this code:**
-
 1. We configure the servo's minimum and maximum pulse width (minPulseWidth and maxPulseWidth) in microseconds, the delay between each step in the sweep (sweepDelay), the minimum and maximum angles (minAngle and maxAngle), and the step size (step).
-
 2. In the `setup` function, we configure PWM using the `ledcSetup` function, specifying a frequency of 500 Hz and 8-bit resolution. We then attach the PWM channel to the specified GPIO pin using `ledcAttachPin`.
-
 3. In the `loop` function, we sweep the servo motor by incrementing the angle and calculating the corresponding pulse width using `map`. We use `ledcWrite` to set the PWM signal's duty cycle, which controls the servo position. Then, we introduce a `delay` to control the sweep speed.
 
-
-
-## 4.2. Advanced: [Control Servos by a key](./servo_with_interrupts.md)
+## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
 ---
 
 # 5. Advanced Application: [Drive MX1508](./mx1508.md)
