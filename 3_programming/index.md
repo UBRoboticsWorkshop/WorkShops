@@ -65,7 +65,7 @@ void loop() { // loop function
 
 ![Alt text](image-6.png)
 
-- connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin 9.)
+- connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin9. But pin9 cannot be used, as it connect with SPI Flash. Please change the pin. [ESP32 Pinout](pinout.md))
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Move Between 2 Points. [Answer](./)
 
@@ -78,7 +78,7 @@ void loop() { // loop function
 
 ![Alt text](image-7.png)
 
-- connect the Wire, upload the code. (**In the Example:** Pin9 and Pin10 are used. For wires connection, plz check last workshop)
+- connect the Wire, upload the code. (**In the Example:** Pin9 and Pin10 are used. Please change the pin. [ESP32 Pinout](pinout.md) For connection: [Drive MX1508](./mx1508.md))
 - Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
 ---
 
