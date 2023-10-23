@@ -142,8 +142,11 @@ void writeAngle(int _channel, int _angle){ //Why the underscores? It's just nami
 ## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
 
 ## 4.3. Advanced: [Drive MX1508 without Lib](./mx1508.md)
+---
 
-## 4.4. Class
+# 5. Class
+
+## 5.1.
 ```cpp
 class Servo{
   const int frequency = 50;
@@ -190,9 +193,12 @@ void loop() {
   newServo.writeAngle(180);
   delay(500);
 
-
 ```
-## 4.6. Head files
+---
+
+# 6. Head files
+
+## 6.1.
 ```cpp
 #include "file_name.h"
 ```
