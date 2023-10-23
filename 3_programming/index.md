@@ -79,6 +79,7 @@ void loop() { // loop function
 ![Alt text](image-7.png)
 
 - connect the Wire, upload the code. (**In the Example:** Pin9 and Pin10 are used. For wires connection, plz check last workshop)
+- Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
 ---
 
 # 4. More about Servos and MX1508
