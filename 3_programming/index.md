@@ -61,8 +61,6 @@ void loop() { // loop function
 
 ## 3.1 Drive a Servo motor to sweep
 > **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
-- **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module.
-![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
 - Open examples: Go to `Files` > `Examples` > `Servo` > `Sweep`
 ![Alt text](image-6.png)
 - connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin 9.)
