@@ -136,9 +136,7 @@ void writeAngle(int _channel, int _angle){ //Why the underscores? It's just nami
 - The code configures an Arduino to control a servo motor with a 50Hz signal. It defines the minimum and maximum pulse width values for the servo, maps them to a 14-bit resolution, and assigns a pin (pin 27) for the servo. In the loop function, it moves the servo from 0 to 180 degrees in steps and pauses for 750 milliseconds between movements. The code uses Pulse Width Modulation (PWM) to control the servo's position by varying the duty cycle of the signal sent to the servo.
 - connect the Servo, upload the code.
 
-> For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> 
-
-- Signal(PWM)
+> For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
 
 ## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
