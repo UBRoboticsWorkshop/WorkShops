@@ -62,17 +62,23 @@ void loop() { // loop function
 ## 3.1 Drive a Servo motor to sweep
 > **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
 - Open examples: Go to `Files` > `Examples` > `Servo` > `Sweep`
+
 ![Alt text](image-6.png)
+
 - connect the Servo, upload the code. (**In the Example:** the PWM wire is connected to pin 9.)
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Move Between 2 Points. [Answer](./)
 
 ## 3.2. Drive MX1508, Using: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
 - Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one.)
+
 ![Alt text](image-5.png)
+
 - Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
+
 ![Alt text](image-7.png)
-- connect the Wire, upload the code. (In the Example: Pin9 and Pin10 are used. For wires connection, plz check last workshop)
+
+- connect the Wire, upload the code. (**In the Example:** Pin9 and Pin10 are used. For wires connection, plz check last workshop)
 ---
 
 # 4. More about Servos and MX1508
