@@ -47,9 +47,9 @@ void loop() { // loop function
 - **Select the board you’re using:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
 
-- Go to Tools > Port and select the COM port the ESP32 is connected to.
+- Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issur.md))
 
-- Then, press the upload button and wait for the “Done uploading” message.
+- Then, press the `upload` button and wait for the “Done uploading” message.
 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
 
@@ -110,9 +110,9 @@ void loop() {
 3. In the `loop` function, we sweep the servo motor by incrementing the angle and calculating the corresponding pulse width using `map`. We use `ledcWrite` to set the PWM signal's duty cycle, which controls the servo position. Then, we introduce a `delay` to control the sweep speed.
 
 
-## 3.2.2. Advanced Application: [Control Servos by a interrupt](./servo_with_interrupts.md)
+## 3.2.2. Advanced Application: [Control Servos by a key](./servo_with_interrupts.md)
 
-## 3.3. Advanced Application: [Drive MX1508]()
+## 3.3. Advanced Application: [Drive MX1508](./)
 
 ---
 # 4. What are libraries and how to install them

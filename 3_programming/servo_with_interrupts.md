@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 const int servoPin = 2;  // GPIO pin where servo is connected
-const uint8_t pulseWidth = 50;
+uint8_t pulseWidth = 50;
 unsigned long lastInterruptTime = 0;
 
 void handleInterrupt() {
