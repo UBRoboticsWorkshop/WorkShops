@@ -112,7 +112,7 @@ void loop() {
 
 ## 3.2.2. Advanced Application: [Control Servos by a key](./servo_with_interrupts.md)
 
-## 3.3. Advanced Application: [Drive MX1508](./)
+## 3.3. Advanced Application: [Drive MX1508](./mx1508.md)
 
 ---
 # 4. What are libraries and how to install them
