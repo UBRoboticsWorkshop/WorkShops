@@ -93,7 +93,7 @@ void loop() { // loop function
 
   We've picked a 14 bit timer, so 2^14= 16384
   So max signal is 0.1*16384 = 1638
-  Min signal is 0.05*16384 = 820
+  Min signal is 0.05*16384 = 819
 
   This gives us ~800 steps- in practice, far more accuracy than the servo can deliver
 
@@ -105,41 +105,44 @@ void loop() { // loop function
 >The code above is a multiline comment- when the code is converted into binary, anything between the /* and */ will be ignored. Here, the functionality of the code is introduced along with some of the maths behind it.
 
 ```cpp
-
 const int frequency = 50;
 const int minPulse = 820;
 const int maxPulse = 1638;
 const int servoPin1 = 27;
 const int resolutionPWM = 14;
-
+```
+>This sets up some constants- these don't change during runtime, indicated by "const". The type of number is an integer, indicated by "int". We don't need decimal places here, so we save storage by not allowing them.
+```cpp
 void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
   int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
   ledcWrite(_channel, angleDuty);
 }
+```
 
+>This is a function- instead of typing out the whole angle to pulse code each time, we can just call this to do it automatically. "Void" means this function doesn't return anything, and the part inside the bracket is the variables we give to the function to tell it what to do. Here, we scale the range of angles (0-180) to the range of duty cycle (819-1638) so that we can control the servo in a more intuitive way. We then write the PWM channel selected by the variable to the scaled duty cycle with ledcWrite. The pulse value determines what percentage of time is spent on vs off- 16384 is always on, 0 is always off, 8192 would be a square wave with equal on time and off time. The servo will only respond to pulses of a certain duration, as calculated in the top comment section.
+
+```cpp
 void setup() {
   pinMode(27, OUTPUT);
 
   ledcSetup(0, frequency, resolutionPWM); //Here, the zero is which timer we want to use- each servo needs a different timer
   ledcAttachPin(servoPin1, 0);
 }
+```
 
+>Setup is a function that only runs once, when the ESP32 turns on. We only need to set up PWM, set the pin as output and attach PWM to it once- otherwise, we're just wasting compute power.
+
+```cpp
 void loop() {
   writeAngle(0, 0);
   delay(750);
   writeAngle(0, 180);
   delay(750);
 }
-
-void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
-  int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
-  ledcWrite(_channel, angleDuty);
-}
-
-
 ```
-- The code configures an Arduino to control a servo motor with a 50Hz signal. It defines the minimum and maximum pulse width values for the servo, maps them to a 14-bit resolution, and assigns a pin (pin 27) for the servo. In the loop function, it moves the servo from 0 to 180 degrees in steps and pauses for 750 milliseconds between movements. The code uses Pulse Width Modulation (PWM) to control the servo's position by varying the duty cycle of the signal sent to the servo.
-- connect the Servo, upload the code.
+
+>This is the main loop- whenever the code gets to the botttom of the loop, it starts again at the top. Here, we use our custom funtion to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
+
 
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
