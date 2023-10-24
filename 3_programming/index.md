@@ -195,7 +195,7 @@ class Servo{
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(pin, channel);
   }
 ```
 >Here is the start of the "public:" tag. This means that anything below it can be accessed outside the object, while any variables or functions above can only be called inside the class.
@@ -209,7 +209,7 @@ class Servo{
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(pin, channel);
   }
 ```
 >Overloading, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
