@@ -9,7 +9,8 @@ It also has a small form factor especially considering these features and number
 - **4 MB Flash**
 - **Wi­Fi**
 - **Bluetooth® + Bluetooth LE module**
-- **26 GPIOs:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
+- **26 GPIOs**
+- **Many interfaces:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
 
 ---
 # 1. Setup
