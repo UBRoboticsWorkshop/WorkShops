@@ -3,6 +3,8 @@
 ---
 # 0. Intro
 **[ESP32 Modules by Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf):**
+The ESP32 is a highly versatile microcontroller. It has a lot of built-in functionality (listed). This makes it perfect for many projects, especially when prototyping as it is quick to set up, and features can be tested easily. For instance, testing Wi-Fi capability on your robot will be much easier than with many other microcontrollers as the required hardware is built-in already. 
+It also has a small form factor especially considering these features and number of GPIO pins. Overall, the ESP32 is an excellent choice for a project that has many systems in place, while saving space in the circuit.
 - **Xtensa dual-core 32-bit LX6 microprocessor, up to 240 MHz**
 - **4 MB Flash**
 - **Wi­Fi**
