@@ -156,7 +156,7 @@ void loop() {
 - Target speed
 - Voltage of supply
 - Current draw
-> And so on. With classes, we can wrap this up into one "Object", and create multiple "instances" of it.
+> And so on. With classes, we can wrap this up into one "Object", and create multiple "instances" of it. And if this hasn't made you care about classes... sorry :(
 ## 5.1.
 ```cpp
 class Servo{
