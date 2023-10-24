@@ -193,12 +193,11 @@ class Servo{
   }
 ```
 >Overloading, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
->Periodus denotes the period in microseconds. Micro is generally Mu, but using u saves time. If you're subscribed to UBRobotics premium available for a reasonable £500 per year, you can copy paste in this "mu". Don't try to use it if you're not, I'll know and I'll uninstall your CP2102 drivers.
-
+>Periodus denotes the period in microseconds. Micro is generally Mu, but using u saves time. If you're subscribed to UBRobotics premium available for a reasonable £500 per year, you can copy paste in this "mu". 
 ```cpp
 μ
 ```
-
+>Don't try to use it if you're not subscribed to UBRobotics premium available for a reasonable £500 per year, it won't compile.
 ```cpp
   void writeAngle(int _angle){
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
