@@ -100,6 +100,11 @@ void loop() { // loop function
   However, these servo motor makers just keep on lying to us- the min and max pulses are completely wrong. I don't know why everyone says they're 1-2ms.
   By tweaking the min and max values, you can get a whole 180 degrees out of these. This math will be left to you.
 */
+```
+
+>The code above is a multiline comment- when the code is converted into binary, anything between the /* and */ will be ignored. Here, the functionality of the code is introduced along with some of the maths behind it.
+
+```cpp
 
 const int frequency = 50;
 const int minPulse = 820;
