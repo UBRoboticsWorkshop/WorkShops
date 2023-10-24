@@ -179,7 +179,7 @@ class Servo{
   }
 ```
 >Here is the start of the "public:" tag. This means that anything below it can be accessed outside the object, while any variables or functions above can only be called inside the class.
->We also have a "constructor"- this is a neat way to tell an object its attributes when we create it- as seen later in the code. Unlike the previous code, here we can put in the pulse length in microseconds- the code does all of the maths for us. It will also adjust automatically to changes in other parameters such as resolution or frequency, making the code easier to work with.
+>We also have a "constructor"- this is a neat way to tell an object its attributes when we create it- as seen later in the code. Unlike the previous code, here we can put in the pulse length in microseconds- the code does all of the maths for us. It will also adjust automatically to changes in other parameters such as resolution or frequency, making the code easier to work with. You'll also notice that some variables are wrapped in "float()"- this converts them into values that tolerate decimal points. Otherwise integer division would be performed, ie 3/10=0- a loss of accuracy that is very likely to cause problems.
 
 ```cpp
   Servo(int _pin, int _channel){
