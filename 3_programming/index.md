@@ -138,17 +138,35 @@ void loop() {
 ---
 
 # 5. Class
-
+> What's a class and why should you care? In robotics, classes are often used to describe a part- with a motor, we may have a set of things we need to do and know:
+### Methods:
+- Set speed
+- Reverse
+- Brake
+- Freewheel
+### Attributes:
+- Current speed
+- Target speed
+- Voltage of supply
+- Current draw
+> And so on. With classes, we can wrap this up into one "Object", and create multiple "instances" of it.
 ## 5.1.
 ```cpp
 class Servo{
+```
+>This line indicates the start of the class, which is everything inside the curly brackets.
+
+```cpp
   const int frequency = 50;
   const int resolution = 14;
   int channel;
   int minPulse;
   int maxPulse;
   int pin;
+```
+>Here, we set up the different variables we'll use to control the Servo. Frequency and resolution are unlikely to vary between servos, but they can be adjusted here if need be. The other four are declared, but not given a value. We'll sort them later. These variables can't be accessed outside the class, we have to use a function to access them. If you want to access them outside the class, move them below the "public:" tag.
 
+```cpp
   public:
   Servo(int _pin, int _minPulseMicros, int _maxPulseMicros, int _channel){
     int periodus = 1000000/50; //1 sec = 1 000 000 micros
@@ -159,27 +177,50 @@ class Servo{
     ledcSetup(channel, frequency, resolution);
     ledcAttachPin(27, channel);
   }
+```
+>Here is the start of the "public:" tag. This means that anything below it can be accessed outside the object, while any variables or functions above can only be called inside the class.
+>We also have a "constructor"- this is a neat way to tell an object its attributes when we create it- as seen later in the code. Unlike the previous code, here we can put in the pulse length in microseconds- the code does all of the maths for us. It will also adjust automatically to changes in other parameters such as resolution or frequency, making the code easier to work with.
 
-  Servo(int _pin){
+```cpp
+  Servo(int _pin, int _channel){
     int periodus = 1000000/50; //1 sec = 1 000 000 micros
     int minPulse = float(1<<resolution)*(float(1000)/float(periodus));
     int maxPulse = float(1<<resolution)*(float(2000)/float(periodus));
     pin = _pin;
+    channel = _channel;
+    ledcSetup(channel, frequency, resolution);
+    ledcAttachPin(27, channel);
   }
-
+```
+>Overlaoding, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
+```cpp
   void writeAngle(int _angle){
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
     ledcWrite(channel, angleDuty);
   }
-
+```
+>Same function as before, but now attatched to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channal 15. 
+```cpp
 };
+```
+>Close the class off
 
+```cpp
 Servo newServo(27, 500, 2500, 0);
+```
+>Here we use the constructor. If you hover over "newServo" in the IDE 2.0, you'll get a window showing you the variable name of each parameter. We've also defined the pulse width manually, to make the servo more accurate.
 
+
+```cpp
 void setup() {
-  Serial.begin(115200);
+  
 }
 
+```
+>Nothin' to set up.
+
+
+```cpp
 void loop() {
   newServo.writeAngle(0);
   delay(500);
@@ -187,6 +228,7 @@ void loop() {
   delay(500);
 
 ```
+>Beep Boop
 ---
 
 # 6. Head files
