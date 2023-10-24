@@ -137,7 +137,7 @@ void loop() {
 ## 4.3. Advanced: [Drive MX1508 without Lib](./mx1508.md)
 ---
 
-# 5. Class
+# 5. Classes
 > What's a class and why should you care? In robotics, classes are often used to describe a part- with a motor, we may have a set of things we need to do and know:
 ### Methods:
 - Set speed
@@ -235,7 +235,7 @@ void loop() {
 >Beep Boop
 ---
 
-# 6. Head files
+# 6. Header files
 
 ## 6.1.
 ```cpp
