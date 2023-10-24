@@ -44,7 +44,7 @@ void loop() { // loop function
 ## 2.2. Uploading the Code
 - **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
-- Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issur.md))
+- Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issue.md))
 - Then, press the `upload` button and wait for the “Done uploading” message.
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
 > If you see a lot of dots (...) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.
