@@ -1,4 +1,4 @@
-# programming
+# Programming
 
 ---
 # 0. Intro
