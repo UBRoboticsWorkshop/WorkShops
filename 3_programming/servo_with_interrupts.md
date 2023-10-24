@@ -1,4 +1,6 @@
-# control servos with a switch
+# Control Servos With a Switch
+Combine this code with the code from the previous to make the servo move between two positions when the button is pressed.
+
 ```cpp
 #include <Arduino.h>
 
