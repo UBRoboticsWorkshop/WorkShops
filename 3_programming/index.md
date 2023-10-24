@@ -105,17 +105,17 @@ void loop() { // loop function
 >The code above is a multiline comment- when the code is converted into binary, anything between the /* and */ will be ignored. Here, the functionality of the code is introduced along with some of the maths behind it.
 
 ```cpp
-const int frequency = 50;
-const int minPulse = 820;
-const int maxPulse = 1638;
-const int servoPin1 = 27;
-const int resolutionPWM = 14;
+const int frequency = 50; //Set frequency of the PWM wave
+const int minPulse = 820; //Minimum pulse length in arbitary PWM units
+const int maxPulse = 1638; //Max pulse length
+const int servoPin1 = 27; //Which pin to put the servo on 
+const int resolutionPWM = 14; //Number of bits for the PWM to indicate fully on- 2^14=16384
 ```
 >This sets up some constants- these don't change during runtime, indicated by "const". The type of number is an integer, indicated by "int". We don't need decimal places here, so we save storage by not allowing them.
 ```cpp
 void writeAngle(int _channel, int _angle){ //Why the underscores? It's just naming convention- you could change the name and it'd work just the same. Here, the underscore means it's a parameter variable
   int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
-  ledcWrite(_channel, angleDuty);
+  ledcWrite(_channel, angleDuty); //Set the selected channel to the calculated duty from above
 }
 ```
 
@@ -123,10 +123,10 @@ void writeAngle(int _channel, int _angle){ //Why the underscores? It's just nami
 
 ```cpp
 void setup() {
-  pinMode(27, OUTPUT);
+  pinMode(servoPin1, OUTPUT); //Set the pin we connected the signal wire as an output
 
   ledcSetup(0, frequency, resolutionPWM); //Here, the zero is which timer we want to use- each servo needs a different timer
-  ledcAttachPin(servoPin1, 0);
+  ledcAttachPin(servoPin1, 0); //Set the pwm channel to output on the pin which the servo is connected to
 }
 ```
 
@@ -134,9 +134,9 @@ void setup() {
 
 ```cpp
 void loop() {
-  writeAngle(0, 0);
-  delay(750);
-  writeAngle(0, 180);
+  writeAngle(0, 0); //Set channel zero- connected to servoPin1- to zero degrees
+  delay(750); //Do nothing for 750ms
+  writeAngle(0, 180); //Set channel zero to 180 degrees
   delay(750);
 }
 ```
