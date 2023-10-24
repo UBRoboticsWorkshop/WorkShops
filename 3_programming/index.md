@@ -243,7 +243,7 @@ void loop() {
   delay(500);
 
 ```
-Beep Boop
+>Beep Boop
 ---
 
 # 6. Head files
