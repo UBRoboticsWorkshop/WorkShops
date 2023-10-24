@@ -69,17 +69,17 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 # 4. Drive MX1508 and Servos
 ## 4.1. Drive MX1508, Using library: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
 
-### 4.1.1. Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one)
+- Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one)
 
 ![Alt text](image-5.png)
 
-### 4.1.2. Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
+- Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
 
 ![Alt text](image-7.png)
 
-### 4.1.3. Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
+- Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
 
-### 4.1.4. Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
+- Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
 
 ## 4.2. Move Servos Between 2 Points
 > **Servo motor:** A servo motor is an actuator that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position.
