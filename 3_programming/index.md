@@ -69,7 +69,7 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 # 4. Drive MX1508 and Servos
 
 ## 4.1 Move Servos Between 2 Points
-> **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
+> **Servo motor:** A servo motor is an actuator that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position.
 - **Go to `File` > `New Sketch`, and copy the following code:**
 ```cpp
 /*
