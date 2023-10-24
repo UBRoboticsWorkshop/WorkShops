@@ -43,6 +43,10 @@ void loop() { // loop function
 2. `Serial.println("Hi!")` is a function call that sends the text "Hi!" to the serial port. This is a way to communicate with a connected computer or other devices via a serial monitor.
 3. `delay(5000)` is a function call that pauses the program for 5,000 milliseconds, which is equivalent to 5 seconds. This means that after printing "Hi!" to the serial monitor, the program will wait for 5 seconds before repeating the process.
 
+Although the ESP32 does support an external debugger for advanced debugging, using Serial.println() can be a very useful way to see what a variable is doing. Just make sure you have Serial.begin() in the setup function of your code!
+
+**If your serial port is printing random symbols, make sure that the baud rate on your veiwer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
+
 ## 2.2. Uploading the Code
 - **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
