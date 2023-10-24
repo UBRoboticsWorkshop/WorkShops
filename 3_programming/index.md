@@ -126,7 +126,7 @@ void loop() {
 }
 ```
 
->This is the main loop- whenever the code gets to the botttom of the loop, it starts again at the top. Here, we use our custom funtion to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
+>This is the main loop- whenever the code gets to the botttom of the loop, it starts again at the top. Here, we use our custom function to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
 
 
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
@@ -192,14 +192,20 @@ class Servo{
     ledcAttachPin(27, channel);
   }
 ```
->Overlaoding, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
+>Overloading, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
+>Periodus denotes the period in microseconds. Micro is generally Mu, but using u saves time. If you're subscribed to UBRobotics premium available for a reasonable £500 per year, you can copy paste in this "mu". Don't try to use it if you're not, I'll know and I'll uninstall your CP2102 drivers.
+
+```cpp
+μ
+```
+
 ```cpp
   void writeAngle(int _angle){
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
     ledcWrite(channel, angleDuty);
   }
 ```
->Same function as before, but now attatched to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channal 15. 
+>Same function as before, but now attatched to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channel 15. 
 ```cpp
 };
 ```
@@ -209,7 +215,6 @@ class Servo{
 Servo newServo(27, 500, 2500, 0);
 ```
 >Here we use the constructor. If you hover over "newServo" in the IDE 2.0, you'll get a window showing you the variable name of each parameter. We've also defined the pulse width manually, to make the servo more accurate.
-
 
 ```cpp
 void setup() {
@@ -226,7 +231,7 @@ void loop() {
   delay(500);
   newServo.writeAngle(180);
   delay(500);
-
+}
 ```
 >Beep Boop
 ---
