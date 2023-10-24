@@ -52,29 +52,14 @@ void loop() { // loop function
 ## 2.3. Now Go to `Tools` > `Serial Monitor` to check the message send form ESP32
 
 ---
-# 3. What are libraries and how to install them
-> Libraries are collections of pre-written code and functions that serve a specific purpose. They are designed to be reused and integrated into your own programs to perform common tasks or add specific functionalities without having to write all the code from scratch.
 
-### [ESP32 Pinout](pinout.md): 
+# 3. [ESP32 Pinout](pinout.md): 
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
-## 3.1. Drive MX1508, Using: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
-
-## 3.2. Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one)
-
-![Alt text](image-5.png)
-
-## 3.3. Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
-
-![Alt text](image-7.png)
-
-## 3.4. Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
-
-## 3.5. Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
 ---
 
-# 4. More about MX1508 and Servos
+# 4. Drive MX1508 and Servos
 
 ## 4.1 Move Servos Between 2 Points
 > **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
@@ -210,3 +195,7 @@ void loop() {
 ```cpp
 #include "file_name.h"
 ```
+---
+
+# 7. What are libraries
+> Libraries are collections of pre-written code and functions that serve a specific purpose. They are designed to be reused and integrated into your own programs to perform common tasks or add specific functionalities without having to write all the code from scratch.
