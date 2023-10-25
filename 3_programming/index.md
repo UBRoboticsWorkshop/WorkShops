@@ -11,7 +11,9 @@ It also has a small form factor especially considering these features and number
 - **Bluetooth® + Bluetooth LE module**
 - **26 GPIOs**
 - **Many interfaces:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
-Make sure to use a new file for each section.
+
+Make sure to use a new file for each section, or the code won't work.
+
 ---
 # 1. Setup
 ## 1.1. [Download and install Arduino IDE 2.x, Add ESP32 Boards](./install_Arduino.md)
