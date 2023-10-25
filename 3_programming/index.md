@@ -1,14 +1,17 @@
-# programming
+# Programming Actuators on ESP32
 
 ---
 # 0. Intro
 **[ESP32 Modules by Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf):**
+The ESP32 is a highly versatile microcontroller. It has a lot of built-in functionality (listed). This makes it perfect for many projects, especially when prototyping as it is quick to set up, and features can be tested easily. For instance, testing Wi-Fi capability on your robot will be much easier than with many other microcontrollers as the required hardware is built-in already. 
+It also has a small form factor especially considering these features and number of GPIO pins. Overall, the ESP32 is an excellent choice for a project that has many systems in place, while saving space in the circuit.
 - **Xtensa dual-core 32-bit LX6 microprocessor, up to 240 MHz**
 - **4 MB Flash**
 - **Wi­Fi**
 - **Bluetooth® + Bluetooth LE module**
-- **26 GPIOs:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
-
+- **26 GPIOs**
+- **Many interfaces:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
+Make sure to use a new file for each section.
 ---
 # 1. Setup
 ## 1.1. [Download and install Arduino IDE 2.x, Add ESP32 Boards](./install_Arduino.md)
@@ -41,10 +44,14 @@ void loop() { // loop function
 2. `Serial.println("Hi!")` is a function call that sends the text "Hi!" to the serial port. This is a way to communicate with a connected computer or other devices via a serial monitor.
 3. `delay(5000)` is a function call that pauses the program for 5,000 milliseconds, which is equivalent to 5 seconds. This means that after printing "Hi!" to the serial monitor, the program will wait for 5 seconds before repeating the process.
 
+Although the ESP32 does support an external debugger for advanced debugging, using Serial.println() can be a very useful way to see what a variable is doing. Just make sure you have Serial.begin() in the setup function of your code!
+
+**If your serial port is printing random symbols, make sure that the baud rate on your viewer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
+
 ## 2.2. Uploading the Code
 - **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b4bae2d8-02d4-477d-9ec8-9fb411a3fef5)
-- Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issur.md))
+- Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issue.md))
 - Then, press the `upload` button and wait for the “Done uploading” message.
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
 > If you see a lot of dots (...) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.
@@ -53,16 +60,35 @@ void loop() { // loop function
 
 ---
 
-# 3. [ESP32 Pinout](pinout.md): 
+# 3. [ESP32 Pinout](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/): 
+**This part is important:**
+Unlike Arduino, the ESP32's pins can't all be used- some are needed to access SPI memory where the program is held, and attaching inputs or outputs can cause the chip to malfunction. These pins can be accessed on our dev boards, but should only be used for debugging- Don't use these pins in your robot! The link in the title can take you to a really helpful guide on the topic.
+
+**When you use the example sketch in the MX1508 library, DO NOT USE THE DEFAULT PINS SUGGESTED!**
+
+Change them to 18/19 instead, or another output-safe pair of pins.
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
 ---
 
 # 4. Drive MX1508 and Servos
+## 4.1. Drive MX1508, Using library: [ESP32MX1508@1.0.5](https://github.com/ElectroMagus/ESP32MX1508)
 
-## 4.1 Move Servos Between 2 Points
-> **Servo motor:** A sg90 servo motor is a precise electric motor that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position with high accuracy.
+- Click on `Library Manger`. Search ESP32MX1508. Click install. (Second one)
+
+![Alt text](image-5.png)
+
+- Open examples: Go to `Files` > `Examples` > `ESP32MX1508` > `basic`
+
+![Alt text](image-7.png)
+
+- Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
+
+- Modify the code. (e.g. to drive 2 motors, feel free to ask for help).
+
+## 4.2. Move Servos Between 2 Points
+> **Servo motor:** A servo motor is an actuator that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position.
 - **Go to `File` > `New Sketch`, and copy the following code:**
 ```cpp
 /*
@@ -126,18 +152,18 @@ void loop() {
 }
 ```
 
->This is the main loop- whenever the code gets to the botttom of the loop, it starts again at the top. Here, we use our custom funtion to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
+>This is the main loop- whenever the code gets to the bottom of the loop, it starts again at the top. Here, we use our custom function to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
 
 
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
 
-## 4.2. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
+## 4.3. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
 
-## 4.3. Advanced: [Drive MX1508 without Lib](./mx1508.md)
+## 4.4. Advanced: [Drive MX1508 without Lib](./mx1508.md)
 ---
 
-# 5. Class
+# 5. Classes
 > What's a class and why should you care? In robotics, classes are often used to describe a part- with a motor, we may have a set of things we need to do and know:
 ### Methods:
 - Set speed
@@ -149,7 +175,7 @@ void loop() {
 - Target speed
 - Voltage of supply
 - Current draw
-> And so on. With classes, we can wrap this up into one "Object", and create multiple "instances" of it.
+> And so on. With classes, we can wrap this up into one "Object", and create multiple "instances" of it. And if this hasn't made you care about classes... sorry :(
 ## 5.1.
 ```cpp
 class Servo{
@@ -175,11 +201,11 @@ class Servo{
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(pin, channel);
   }
 ```
 >Here is the start of the "public:" tag. This means that anything below it can be accessed outside the object, while any variables or functions above can only be called inside the class.
->We also have a "constructor"- this is a neat way to tell an object its attributes when we create it- as seen later in the code. Unlike the previous code, here we can put in the pulse length in microseconds- the code does all of the maths for us. It will also adjust automatically to changes in other parameters such as resolution or frequency, making the code easier to work with.
+>We also have a "constructor"- this is a neat way to tell an object its attributes when we create it- as seen later in the code. Unlike the previous code, here we can put in the pulse length in microseconds- the code does all of the maths for us. It will also adjust automatically to changes in other parameters such as resolution or frequency, making the code easier to work with. You'll also notice that some variables are wrapped in "float()"- this converts them into values that tolerate decimal points. Otherwise integer division would be performed, ie 3/10=0- a loss of accuracy that is very likely to cause problems.
 
 ```cpp
   Servo(int _pin, int _channel){
@@ -189,17 +215,22 @@ class Servo{
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(pin, channel);
   }
 ```
->Overlaoding, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
+>Overloading, as seen here, is where two identical function names are used with different parameters. Here, one allows for you to calibrate pulse length while the other defaults to 1-2ms- for a servo that just needs to "move", you probably don't care about accuracy and so a simpler setup is useful. When we call it, it'll automatically use the right one depending on the parameters we give it. The variables _pin and _channel will stop existing when the constructor is done, so we copy them to the class's variables pin and channel to store them.
+>Periodus denotes the period in microseconds. Micro is generally Mu, but using u saves time. If you're subscribed to UBRobotics premium available for a reasonable £500 per year, you can copy paste in this "mu". 
+```cpp
+μ
+```
+>Don't try to use it if you're not subscribed to UBRobotics premium available for a reasonable £500 per year, it won't compile.
 ```cpp
   void writeAngle(int _angle){
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
     ledcWrite(channel, angleDuty);
   }
 ```
->Same function as before, but now attatched to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channal 15. 
+>Same function as before, but now attached to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channel 15. 
 ```cpp
 };
 ```
@@ -209,7 +240,6 @@ class Servo{
 Servo newServo(27, 500, 2500, 0);
 ```
 >Here we use the constructor. If you hover over "newServo" in the IDE 2.0, you'll get a window showing you the variable name of each parameter. We've also defined the pulse width manually, to make the servo more accurate.
-
 
 ```cpp
 void setup() {
@@ -226,18 +256,7 @@ void loop() {
   delay(500);
   newServo.writeAngle(180);
   delay(500);
-
+}
 ```
 >Beep Boop
 ---
-
-# 6. Head files
-
-## 6.1.
-```cpp
-#include "file_name.h"
-```
----
-
-# 7. Libraries
-> Libraries are collections of pre-written code and functions that serve a specific purpose. They are designed to be reused and integrated into your own programs to perform common tasks or add specific functionalities without having to write all the code from scratch.
