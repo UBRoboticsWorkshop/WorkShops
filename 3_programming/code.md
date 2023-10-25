@@ -85,7 +85,8 @@ public:
     ledcWrite(channel, angleDuty);
   }
 };
-  Servo newServo(27, 500, 2500, 0);
+
+Servo newServo(27, 500, 2500, 0);
 
 void setup() {
   
