@@ -84,8 +84,9 @@ public:
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
     ledcWrite(channel, angleDuty);
   }
+};
 
-  Servo newServo(27, 500, 2500, 0);
+Servo newServo(27, 500, 2500, 0);
 
 void setup() {
   
