@@ -26,7 +26,7 @@ Make sure to use a new file for each section, or the code won't work.
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-functional-overview.jpg">
 
-> we can communicate with ESP32 through UART.
+> we can communicate with the ESP32 through UART.
 * **Code:** Go to `File` > `New Sketch`, and copy the following code:
 ``` cpp
 void setup() { // setup function returns nothing
