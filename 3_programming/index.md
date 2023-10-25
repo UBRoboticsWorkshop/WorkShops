@@ -60,7 +60,7 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 
 ---
 
-# 3. [ESP32 Pinout]((https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)): 
+# 3. [ESP32 Pinout](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/): 
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
