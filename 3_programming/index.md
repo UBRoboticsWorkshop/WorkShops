@@ -260,14 +260,3 @@ void loop() {
 ```
 >Beep Boop
 ---
-
-# 6. Header files
-
-## 6.1.
-```cpp
-#include "file_name.h"
-```
----
-
-# 7. Libraries
-> Libraries are collections of pre-written code and functions that serve a specific purpose. They are designed to be reused and integrated into your own programs to perform common tasks or add specific functionalities without having to write all the code from scratch.
