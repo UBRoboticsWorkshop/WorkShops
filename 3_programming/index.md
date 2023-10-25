@@ -72,6 +72,7 @@ Change them to 18/19 instead, or another output-safe pair of pins.
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
+## 3.1. [How to use the Bread Board](./bread_board.md)
 ---
 
 # 4. Drive MX1508 and Servos
