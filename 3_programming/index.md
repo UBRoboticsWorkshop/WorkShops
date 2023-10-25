@@ -46,7 +46,7 @@ void loop() { // loop function
 
 Although the ESP32 does support an external debugger for advanced debugging, using Serial.println() can be a very useful way to see what a variable is doing. Just make sure you have Serial.begin() in the setup function of your code!
 
-**If your serial port is printing random symbols, make sure that the baud rate on your veiwer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
+**If your serial port is printing random symbols, make sure that the baud rate on your viewer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
 
 ## 2.2. Uploading the Code
 - **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
@@ -85,7 +85,7 @@ Change them to 18/19 instead, or another output-safe pair of pins.
 
 - Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
 
-- Modify the code. (e.g. Drive 2 motors... feel free to ask for help. )
+- Modify the code. (e.g. to drive 2 motors, feel free to ask for help).
 
 ## 4.2. Move Servos Between 2 Points
 > **Servo motor:** A servo motor is an actuator that uses feedback control to maintain its position. It works by receiving a [PWM](https://en.wikipedia.org/wiki/Pulse-width_modulation) signal, comparing it to its actual position, and making adjustments to minimize any error. This allows it to move to a specific position.
@@ -152,7 +152,7 @@ void loop() {
 }
 ```
 
->This is the main loop- whenever the code gets to the botttom of the loop, it starts again at the top. Here, we use our custom function to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
+>This is the main loop- whenever the code gets to the bottom of the loop, it starts again at the top. Here, we use our custom function to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
 
 
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
@@ -230,7 +230,7 @@ class Servo{
     ledcWrite(channel, angleDuty);
   }
 ```
->Same function as before, but now attatched to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channel 15. 
+>Same function as before, but now attached to the specific servo- we don't need to pass a channel number, we can call the servo by name. If you have a project with 20 servos, it's much easier to remember "frontLeftKnee" than channel 15. 
 ```cpp
 };
 ```
