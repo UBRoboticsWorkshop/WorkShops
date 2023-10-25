@@ -158,6 +158,8 @@ void loop() {
 > For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
 - Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
 
+- [full code](./code.md)
+
 ## 4.3. Advanced: [Control Servos by a button](./servo_with_interrupts.md)
 
 ## 4.4. Advanced: [Drive MX1508 without Lib](./mx1508.md)
@@ -259,4 +261,6 @@ void loop() {
 }
 ```
 >Beep Boop
+
+- [full code](./code.md)
 ---
