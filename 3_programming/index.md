@@ -227,7 +227,7 @@ class Servo{
 ```cpp
 μ
 ```
->Don't try to use it if you're not subscribed to UBRobotics premium available for a reasonable £500 per year, it won't compile.
+>Don't try to use it if you're not subscribed to UBRobotics premium available for a reasonable £500 per year, it won't compile. Click here to get the [premium](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 ```cpp
   void writeAngle(int _angle){
     int angleDuty = map(_angle, 0,180, minPulse, maxPulse); //The map function scales the input variable from the first range to the second
