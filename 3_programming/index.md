@@ -61,6 +61,12 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 ---
 
 # 3. [ESP32 Pinout](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/): 
+**This part is important:**
+Unlike Arduino, the ESP32's pins can't all be used- some are needed to access SPI memory where the program is held, and attaching inputs or outputs can cause the chip to malfunction. These pins can be accessed on our dev boards, but should only be used for debugging- Don't use these pins in your robot! The link in the title can take you to a really helpful guide on the topic.
+
+**When you use the example sketch in the MX1508 library, DO NOT USE THE DEFAULT PINS SUGGESTED!**
+
+Change them to 18/19 instead, or another output-safe pair of pins.
 
 <img width="600" src="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-pinout.png">
 
