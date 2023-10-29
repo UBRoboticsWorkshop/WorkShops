@@ -8,3 +8,5 @@
 - Week 8: Communications
 - Week 9: Catchup/Questions
 - Week 10: Competition
+
+- PPMS: for Makerspace access
