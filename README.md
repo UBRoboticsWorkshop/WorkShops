@@ -9,4 +9,4 @@
 - Week 9: Catchup/Questions
 - Week 10: Competition
 
-- PPMS: for Makerspace access
+- PPMS: for Makerspace access [https://bham.sharepoint.com/sites/989-UBRoboticsSociety-Student/Shared%20Documents/SUMOBOT%2023-24/SUMOBOT%2023-24%20Member%20Access%20Published/PPMS%20Instructions.pdf?csf=1&web=1&e=8ytGAX] 
