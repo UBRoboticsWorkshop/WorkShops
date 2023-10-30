@@ -9,4 +9,5 @@
 - Week 9: Catchup/Questions
 - Week 10: Competition
 
-- PPMS: for Makerspace access [https://shorturl.at/fjxO0] 
+- PPMS: for Makerspace access [https://shorturl.at/fjxO0]
+- Onedrive access : [https://bham.sharepoint.com/sites/989-UBRoboticsSociety-Student/Shared%20Documents/SUMOBOT%2023-24/SUMOBOT%2023-24%20Member%20Access%20Published?csf=1&web=1&e=XspV8H]
