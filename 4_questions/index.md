@@ -20,6 +20,9 @@ Please find the wiring diagrams for  your ESP32  boards. These are color-coded a
 Motors:
 ￼<img width="552" alt="Screen Shot 2023-11-01 at 2 01 40 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/2030bc2e-0707-4b76-9bbb-594a17d081cd">
 
+Connecting another motor to the same board :
+![IMG_258BF28C3720-1](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/586e7e72-adf1-414b-8b2e-a5c724e6cfad)
+
 ￼Servo Motors
 <img width="552" alt="Screen Shot 2023-11-01 at 2 10 15 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/d8c79f77-65a4-43a6-a1ee-977e986c0df6">
 
