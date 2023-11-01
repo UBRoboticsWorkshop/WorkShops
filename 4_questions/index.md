@@ -5,11 +5,11 @@ If you have yet to finish tasks from last week, please navigate to the respectiv
 If you’ve :
 
 1️⃣. Made the ESP32 print Hello World
-Your next steps : 2
+-> Your next steps : 2
 
 
 2️⃣. Drove the servo motor
-Your next steps : 3
+-> Your next steps : 3
 
 
 3️⃣. Got the MX1508(Motor driver) working
