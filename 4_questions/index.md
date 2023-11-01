@@ -24,4 +24,10 @@ Motors:
 <img width="552" alt="Screen Shot 2023-11-01 at 2 10 15 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/d8c79f77-65a4-43a6-a1ee-977e986c0df6">
 
 FOr your reference : 
-![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/48457016-f69e-490a-b44a-5a0fc08d8714)
+<img width="666" alt="image" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/c3f1e55d-c2af-4134-b16c-87477b1d25a0">
+
+A  rough wiring diagram from last year (maybe you can use this but you should probably not)
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/bd811c24-c755-4dec-aa24-d4b4b3fb48f0)
+
+
+
