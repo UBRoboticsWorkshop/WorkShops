@@ -5,15 +5,15 @@ If you have yet to finish tasks from last week, please navigate to the respectiv
 If you’ve :
 
 1️⃣. Made the ESP32 print Hello World
-Your next steps :
+Your next steps : 2
 
 
 2️⃣. Drove the servo motor
-Your next steps :
+Your next steps : 3
 
 
 3️⃣. Got the MX1508(Motor driver) working
-Your next steps :
+
 
 Please find the wiring diagrams for  your ESP32  boards. These are color-coded and hopefully you can follow along.
 
@@ -22,3 +22,4 @@ Motors:
 
 ￼Servo Motors
 <img width="552" alt="Screen Shot 2023-11-01 at 2 10 15 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/d8c79f77-65a4-43a6-a1ee-977e986c0df6">
+
