@@ -23,3 +23,5 @@ Motors:
 ￼Servo Motors
 <img width="552" alt="Screen Shot 2023-11-01 at 2 10 15 PM" src="https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/d8c79f77-65a4-43a6-a1ee-977e986c0df6">
 
+FOr your reference : 
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/48457016-f69e-490a-b44a-5a0fc08d8714)
