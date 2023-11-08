@@ -86,7 +86,9 @@ Change them to 18/19 instead, or another output-safe pair of pins.
 
 ![Alt text](image-7.png)
 
-- Connect the Wire, and upload the code. (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [ESP32 Pinout](pinout.md) If you don't know how to connect, click [Drive MX1508](./mx1508.md))
+- Connect the Wire, and upload the code. 
+> [!NOTE]
+> (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [${\color{red}ESP32Pinout}$](pinout.md) If you don't know how to connect, click [${\color{red}Drive MX1508}$](./mx1508.md))
 
 - Modify the code. (e.g. to drive 2 motors, feel free to ask for help).
 
@@ -158,7 +160,7 @@ void loop() {
 >This is the main loop- whenever the code gets to the bottom of the loop, it starts again at the top. Here, we use our custom function to set the servo between zero degrees and 180 degrees repeatedly. The servos don't have feedback- writeAngle() finishes near instantly, not when the servo gets to the position.
 
 
-> For a Servo motor: <span style="color: red;">Red</span> - Vcc(5V), <span style="color: brown;">Brown</span> - GND, <span style="color: orange;">Orange</span> - Signal(PWM)
+> For a Servo motor: ${\color{red}Red}$ - Vcc(5V), ${\color{Brown}Brown}$ - GND, ${\color{Orange}Orange}$ - Signal(PWM)
 - Modify the example, Make the Servo Sweep. [Answer](./servo_sweep.md)
 
 - [full code](./code.md)
