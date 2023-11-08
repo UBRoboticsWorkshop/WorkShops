@@ -41,11 +41,11 @@ Create a gear using the add-in tab, and input the parameters shown.
 
 >Printing gears is something of a questionable decision, but a printed gear is often better than no gear. Due to the short service life, low speed and comparably low forces at play, you should get away with it here.
 
->The ideal material for FDM gears is nylon, however PLA and Tough PLA perform suprisingly well due to high UTS and rigidity. In the makerspace, you'll need to use PLA.
+>The ideal material for FDM gears is nylon, however PLA and Tough PLA perform surprisingly  well due to high UTS and rigidity. In the makerspace, you'll need to use PLA.
 </details>
 
 
-Next, use P to open the project tool and project the mounting features of the servo onto the sketch. A frame to the left of the servo will create a mounting point for the gears. Here, PLA has a low enough coeffecient of friction that the mechanism will work without a bearing- it could be significantly improved by one though.
+Next, use P to open the project tool and project the mounting features of the servo onto the sketch. A frame to the left of the servo will create a mounting point for the gears. Here, PLA has a low enough coefficient  of friction that the mechanism will work without a bearing- it could be significantly improved by one though.
 
 Extrude the base, taking care to make sure that the gear teeth do not cut into the extrude. A large column will support the gear, with 0.4mm clearance either side to reduce friction between the two surfaces.
 
@@ -53,7 +53,7 @@ Cut some holes out of the gear to allow screws from the servo horns to be screwe
 
 Add some bars to the gears, to act as the jaws of the gripper. If you choose to use this mechanism, you'll probably want to add some sort of claw to the end of this.
 
-Add a quadbolt to the back of the bracket, so that it can be bolted onto the robot frame. Again, if you choose to use this you might want to mount it differently, to fit with your robot.
+Add a quad bolt to the back of the bracket, so that it can be bolted onto the robot frame. Again, if you choose to use this you might want to mount it differently, to fit with your robot.
 
 Finally, we'll add some fillets to reduce the risk of the grabber snapping off.
 
@@ -119,7 +119,7 @@ void loop() { //make sure to delete your old main loop before pasting this one i
   }
 }
 ```
-Now it will ignore anything that isn't an 'a', and print some text everytime it recieves one. With the "if" statement, there's "==" instead of "="- that's because one equals means setting a variable, while two means comparing two values. Also, make sure to use ' ' for characters instead of " ".
+Now it will ignore anything that isn't an 'a', and print some text every time it receives  one. With the "if" statement, there's "==" instead of "="- that's because one equals means setting a variable, while two means comparing two values. Also, make sure to use ' ' for characters instead of " ".
 
 This code is just for testing, and there's a few ways it can be improved. For example the ESP32 is doing nothing unless there is Serial data, when it could be doing other tasks. Instead of waiting for Serial, we could simply check periodically for new serial data and then act if it happens to be there.
 
@@ -209,11 +209,11 @@ Next we'll add a design suggestion body.
 
 Next, we'll switch to the generative design environment.
 
-Here, we'll contruct obstacle geometry to prevent the arm from colliding with a servo or creating an obstruction to getting under a robot.
+Here, we'll construct obstacle geometry to prevent the arm from colliding with a servo or creating an obstruction to getting under a robot.
 
 Hide the obstacle geometry, and add a load to the end of the gripper. We'll also set the bolt holes as fixed points. Clone this load case twice, and set the loads to apply from the sides- this way the output will be able to handle forces from various directions, not just vertical. These loads are quite simple, in real world applications you may find that the load cases are hard to define.
 
-We'll set the method of creation to additive and unrestricted. The former is more likley to create a usable part, but the latter can sometimes output parts that are worth considering. Set the targets to be as stiff as possible, and constrain weight to 10 grams.
+We'll set the method of creation to additive and unrestricted. The former is more likely to create a usable part, but the latter can sometimes output parts that are worth considering. Set the targets to be as stiff as possible, and constrain weight to 10 grams.
 
 We'll also set the materials to nylon and tough 2000 resin- only the latter is available with training on the Form 3B in the makerspace, so if using PLA make sure to set a high enough safety factor.
 
