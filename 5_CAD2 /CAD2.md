@@ -181,6 +181,34 @@ There's some in the Makerspace.
 
 Generative design can use cloud computing to create designs with much better mechanical properties than traditionally constructed parts. It's important to use it in the correct manner though: consider how easily it can be fabricated, how it may handle unexpected/shock loading and perhaps most importantly if it's needed- there's no point creating a custom generative carbon fibre chassis with titanium inserts weighing 0.36 grams only to get thrown around by heavier robots!
 
+Generative design can use cloud computing to create designs with much better mechanical properties than traditionally constructed parts. It's important to use it in the correct manner though: consider how easily it can be fabricated, how it may handle unexpected/shock loading and perhaps most importantly if it's needed- there's no point creating a custom generative carbon fibre chassis with titanium inserts weighing 0.36 grams only to get thrown around by heavier robots!
+
+We'll begin by creating the bodies that we'll need to mount our arm to, here using a pattern of four bolts to provide a firm mount. 
+
+Next we'll add a design suggestion body.
+
+<details><summary> <h4>Suggestion body</h4>
+
+</summary>
+A suggestion body gives the process a place to start, and can speed up completion of your designs. However, it can sometimes funnel the process towards less optimal designs, and takes time to design well. As such most of the time, a suggestion body is redundant.
+</details>
+
+Next, we'll switch to the generative design environment.
+
+Here, we'll contruct obstacle geometry to prevent the arm from colliding with a servo or creating an obstruction to getting under a robot.
+
+Hide the obstacle geometry, and add a load to the end of the gripper. We'll also set the bolt holes as fixed points. Clone this load case twice, and set the loads to apply from the sides- this way the output will be able to handle forces from various directions, not just vertical. These loads are quite simple, in real world applications you may find that the load cases are hard to define.
+
+We'll set the method of creation to additive and unrestricted. The former is more likley to create a usable part, but the latter can sometimes output parts that are worth considering. Set the targets to be as stiff as possible, and constrain weight to 10 grams.
+
+We'll also set the materials to nylon and tough 2000 resin- only the latter is available with training on the Form 3B in the makerspace, so if using PLA make sure to set a high enough safety factor.
+
+Run a precheck- we'll see a warning that some bodies are hidden, since we hid the obstacles earlier. This is generally fine to ignore, but we'll unhide the obstacles to make sure they make sense. Check again, and there should be no problems. This means we are ready to press generate.
+
+After a while, many different models will appear and begin to iterate. There are various tools to help you consider cost, safety, performance and weight. 
+
+Once you have a preferred option, open it and use create body to export it into it's own file. Quite often you may need to modify the output, so that it can be printed more easily or to better fit a part- you can do this here.
+
 (1) Drawing the body
 https://www.youtube.com/watch?v=bH-5e4h4fUU&list=PLkHek7ZiQ1lN-IS7YYxnCIRionaxeUwmy&index=5
 
