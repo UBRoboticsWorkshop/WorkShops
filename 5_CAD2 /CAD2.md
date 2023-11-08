@@ -26,6 +26,7 @@ Create a gear using the add-in tab, and input the parameters shown.
 <details> <summary> <h4>What do these parameters do?</h4>
 
 </summary>
+
 >The modulus of a gear determines tooth size- the number of teeth times modulus will be related to pitch diameter. For two gears to mesh properly, the pitch diameters should be contacting.
 
 >Root fillet changes how the teeth are anchored, with a greater radius leading to better strength.
@@ -37,6 +38,7 @@ Create a gear using the add-in tab, and input the parameters shown.
 <details> <summary> <h4>Printing gears?</h4>
 
 </summary>
+
 >Printing gears is something of a questionable decision, but a printed gear is often better than no gear. Due to the short service life, low speed and comparably low forces at play, you should get away with it here.
 
 >The ideal material for FDM gears is nylon, however PLA and Tough PLA perform suprisingly well due to high UTS and rigidity. In the makerspace, you'll need to use PLA.
