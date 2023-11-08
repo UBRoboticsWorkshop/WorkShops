@@ -73,14 +73,6 @@ last off, we'll set all of the mounts to the proper tolerances to fit the mounti
 
 </details>
 
-<details> <summary> <h2>Righter</h2>
-
-</summary>
-
-The dawgs, the grippers
-
-</details>
-
 <details> <summary> <h2>Sequencing</h2>
 
 </summary>
