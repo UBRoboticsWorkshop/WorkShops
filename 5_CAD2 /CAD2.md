@@ -64,12 +64,16 @@ Finally, we'll add some fillets to reduce the risk of the grabber snapping off.
 </summary>
 
 As before, import the MG996r.
+https://youtu.be/Fp6E6ZMHRK8?si=LIRTY52gOgyhQD85
 
 Next, we'll position a block below the servo so that the servo can be bolted to it using two M4 bolts. Extend the block out behind the servo, and add a quad bolt.
+https://youtu.be/YUf5---bseU?si=9CBFd3frWbgXLfg3
 
 Again, we'll construct a plane offset at the distance the servo horn will be at. Two screw holes 15mm apart will allow the screws that come with the servos to connect to the servo horn. Draw a slot to work as the arm, before extruding the arm. We'll also add a hole to the end, to allow for the fitting of a scoop later.
+https://youtu.be/YUf5---bseU?si=XkeFrtki_m0T1HTX
 
 last off, we'll set all of the mounts to the proper tolerances to fit the mounting bolts.
+https://youtu.be/j3_u3ed1qjo?si=8S0kzAj0nzK9u8wG
 
 </details>
 
