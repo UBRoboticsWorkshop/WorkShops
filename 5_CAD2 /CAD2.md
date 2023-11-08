@@ -193,6 +193,7 @@ Next we'll add a design suggestion body.
 A suggestion body gives the process a place to start, and can speed up completion of your designs. However, it can sometimes funnel the process towards less optimal designs, and takes time to design well. As such most of the time, a suggestion body is redundant.
 </details>
 
+
 Next, we'll switch to the generative design environment.
 
 Here, we'll contruct obstacle geometry to prevent the arm from colliding with a servo or creating an obstruction to getting under a robot.
