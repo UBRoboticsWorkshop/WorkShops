@@ -88,7 +88,9 @@ Change them to 18/19 instead, or another output-safe pair of pins.
 
 - Connect the Wire, and upload the code. 
 > [!NOTE]
-> (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. [${\color{red}ESP32Pinout}$](pinout.md) If you don't know how to connect, click [${\color{red}Drive MX1508}$](./mx1508.md))
+> (In the Example: Pin9 and Pin10 are used. They are connected with internal SPI Flash. As a result, please change the pins. 
+> [ESP32 Pinout here](pinout.md) 
+> If you don't know how to connect, click [Drive MX1508}](./mx1508.md))
 
 - Modify the code. (e.g. to drive 2 motors, feel free to ask for help).
 
