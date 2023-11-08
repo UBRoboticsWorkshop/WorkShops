@@ -1,9 +1,12 @@
 # Programming Actuators on ESP32
 
 ---
-# 0. Intro
 <details>
-  <summary>Click me</summary>
+  <summary>
+  
+  # 0. Intro
+  
+  </summary>
 
 **[ESP32 Modules by Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf):**
 The ESP32 is a highly versatile microcontroller. It has a lot of built-in functionality (listed). This makes it perfect for many projects, especially when prototyping as it is quick to set up, and features can be tested easily. For instance, testing Wi-Fi capability on your robot will be much easier than with many other microcontrollers as the required hardware is built-in already. 
@@ -20,12 +23,25 @@ Make sure to use a new file for each section, or the code won't work.
 </details>
 
 ---
-# 1. Setup
+<details>
+  <summary>
+
+  # 1. Setup
+
+  </summary>
+
 ## 1.1. [Download and install Arduino IDE 2.x, Add ESP32 Boards](./install_Arduino.md)
 ## 1.2. [Install serial port driver](./driver_issue.md)
 
+</details>
+
 ---
-# 2. Hello word!
+<details>
+  <summary>
+
+  # 2. Hello word!
+
+  </summary>
 
 ## 2.1. Serial port (UART) code
 
@@ -83,6 +99,8 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 > If you see a lot of dots (...) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.
 
 ## 2.3. Now Go to `Tools` > `Serial Monitor` to check the message send form ESP32
+
+</details>
 
 ---
 
