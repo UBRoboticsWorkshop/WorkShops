@@ -167,6 +167,11 @@ void loop() {//make sure to delete your old main loop before pasting this one in
 ```
 Try extending this to cover the entire keyboard, doesn't count if you don't use a different case for every character.
 
+
+The print statements here can be replaced with commands to move the servos, and this way you can have control of the effectors based on commands sent from the serial terminal- commands from your controller next week will arrive in a similar manner.
+
+Try setting a servo to toggle positions, or move a certain distance each time a command is sent. You can also have each key set a different position.
+
 </details>
 
 <details> <summary> <h2>Mounting Parts</h2>
