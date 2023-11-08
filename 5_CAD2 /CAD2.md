@@ -21,10 +21,13 @@ Import the MG996r model, and position it for the addition of the cogs.
 https://www.youtube.com/watch?v=2wj7eyW3hcU&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=1
 
 Next, set an offset plane 15.5mm from the mounting tags, as this is how far away the top of the mounting point we will be using here is.
+https://www.youtube.com/watch?v=zykc2e0Vs78&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=10
+
 
 Create a gear using the add-in tab, and input the parameters shown. 
+https://www.youtube.com/watch?v=Kzm5gPF17iA&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=4
 
-
+https://www.youtube.com/watch?v=qOHpFVWx1_w&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=7
 
 <details> <summary> <h4>What do these parameters do?</h4>
 
