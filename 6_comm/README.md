@@ -1,7 +1,10 @@
 # Communications
 
 > [!NOTE]
-> There are 2 method
+> You need have general ideals about:
+> - HTML, JavaScript
+> - UDP, TCP
+> - WebSocket
 
 <details>
   <summary>
