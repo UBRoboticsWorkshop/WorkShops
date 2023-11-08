@@ -219,6 +219,8 @@ Next we'll add a design suggestion body.
 
 </summary>
 
+The way this section is structured : We've got some text up here explaning the steps , to give you an overview. If you scroll down, you'll find step-by-step videos. 
+
 >A suggestion body gives the process a place to start, and can speed up completion of your designs. However, it can sometimes funnel the process towards less optimal designs, and takes time to design well. As such most of the time, a suggestion body is redundant.
 </details>
 
