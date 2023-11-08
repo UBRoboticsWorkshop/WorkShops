@@ -22,7 +22,7 @@ Next, set an offset plane 15.5mm from the mounting tags, as this is how far away
 Create a gear using the add-in tab, and input the parameters shown. 
 
 
----
+--
 <details> <summary> <h4>What do these parameters do?</h4>
 
 </summary>
@@ -33,7 +33,7 @@ Root fillet changes how the teeth are anchored, with a greater radius leading to
 Backlash offsets the teeth's faces, making them slimmer. This means the gears can move a few fractions of a degree before touching one another. For 3D printing, this should be kept quite high.
 </details>
 
----
+--
 
 <details> <summary> <h4>Printing gears?</h4>
 
@@ -43,7 +43,7 @@ Printing gears is something of a questionable decision, but a printed gear is of
 The ideal material for FDM gears is nylon, however PLA and Tough PLA perform suprisingly well due to high UTS and rigidity. In the makerspace, you'll need to use PLA.
 </details>
 
----
+--
 
 Next, use P to open the project tool and project the mounting features of the servo onto the sketch. A frame to the left of the servo will create a mounting point for the gears. Here, PLA has a low enough coeffecient of friction that the mechanism will work without a bearing- it could be significantly improved by one though.
 
