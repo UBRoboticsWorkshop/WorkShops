@@ -206,7 +206,8 @@ Next we'll add a design suggestion body.
 <details><summary> <h4>Suggestion body</h4>
 
 </summary>
-A suggestion body gives the process a place to start, and can speed up completion of your designs. However, it can sometimes funnel the process towards less optimal designs, and takes time to design well. As such most of the time, a suggestion body is redundant.
+
+>A suggestion body gives the process a place to start, and can speed up completion of your designs. However, it can sometimes funnel the process towards less optimal designs, and takes time to design well. As such most of the time, a suggestion body is redundant.
 </details>
 
 
