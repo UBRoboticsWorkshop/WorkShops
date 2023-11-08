@@ -2,6 +2,9 @@
 
 ---
 # 0. Intro
+<details>
+  <summary>Click me</summary>
+
 **[ESP32 Modules by Espressif](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf):**
 The ESP32 is a highly versatile microcontroller. It has a lot of built-in functionality (listed). This makes it perfect for many projects, especially when prototyping as it is quick to set up, and features can be tested easily. For instance, testing Wi-Fi capability on your robot will be much easier than with many other microcontrollers as the required hardware is built-in already. 
 It also has a small form factor especially considering these features and number of GPIO pins. Overall, the ESP32 is an excellent choice for a project that has many systems in place, while saving space in the circuit.
@@ -13,6 +16,8 @@ It also has a small form factor especially considering these features and number
 - **Many interfaces:** SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive touch sensor, ADC, DAC, TWAI®
 
 Make sure to use a new file for each section, or the code won't work.
+
+</details>
 
 ---
 # 1. Setup
@@ -39,16 +44,33 @@ void loop() { // loop function
 }
 ```
 - **In the setup function:**
+
+<details>
+  <summary>Click me</summary>
+
 1. `void setup()` is a special function in Arduino programming that is called once when the microcontroller starts. It's used for initializing things that only need to be done once.
 2. `Serial.begin(115200)` is a function call that initializes the serial communication with a baud rate of 115,200. The serial communication is a way for the microcontroller to send and receive data with an external device like a computer.
+
+</details>
+
+
+
 - **In the loop function:**
+
+<details>
+  <summary>Click me</summary>
+
 1. `void loop()` is another special function in Arduino programming that runs continuously after the setup function. Any code placed in this function will be executed in a loop until the microcontroller is turned off.
 2. `Serial.println("Hi!")` is a function call that sends the text "Hi!" to the serial port. This is a way to communicate with a connected computer or other devices via a serial monitor.
 3. `delay(5000)` is a function call that pauses the program for 5,000 milliseconds, which is equivalent to 5 seconds. This means that after printing "Hi!" to the serial monitor, the program will wait for 5 seconds before repeating the process.
 
 Although the ESP32 does support an external debugger for advanced debugging, using Serial.println() can be a very useful way to see what a variable is doing. Just make sure you have Serial.begin() in the setup function of your code!
 
-**If your serial port is printing random symbols, make sure that the baud rate on your viewer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
+</details>
+
+>
+> [!IMPORTANT]
+> **If your serial port is printing random symbols, make sure that the baud rate on your viewer matches the number in serial.begin(). It's likely that it will be set to 9600 by default, however this is a very slow speed for data transfer and the ESP32 can go much faster (>1000000)**
 
 ## 2.2. Uploading the Code
 - **Select the board:** Go to Tools > Board > ESP32 > ESP32 Dev Module. 
@@ -56,6 +78,8 @@ Although the ESP32 does support an external debugger for advanced debugging, usi
 - Go to `Tools` > `Port` and select the COM port the ESP32 is connected to. (can't find the port? [click here](./driver_issue.md))
 - Then, press the `upload` button and wait for the “Done uploading” message.
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/61526569/b27423db-8f20-49be-9616-8209eac704bb)
+
+> [!IMPORTANT]
 > If you see a lot of dots (...) on the debugging window and the “Failed to connect to ESP32: Timed out waiting for packet header” message, that means you need to press the ESP32 on-board BOOT button after the dots start appearing.
 
 ## 2.3. Now Go to `Tools` > `Serial Monitor` to check the message send form ESP32
