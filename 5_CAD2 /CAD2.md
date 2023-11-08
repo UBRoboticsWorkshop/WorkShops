@@ -9,6 +9,8 @@ We'll also be touching on sequencing and control, but we'll have more of a deep 
 
 There are 2 mechanisms here: grappler and flipper.
 
+Once you've finished adapting these parts for your robot, you can print them off in the Makerspace.
+
 <details> <summary> <h2>Grappler</h2>
 
 </summary>
