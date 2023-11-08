@@ -181,4 +181,31 @@ There's some in the Makerspace.
 
 Generative design can use cloud computing to create designs with much better mechanical properties than traditionally constructed parts. It's important to use it in the correct manner though: consider how easily it can be fabricated, how it may handle unexpected/shock loading and perhaps most importantly if it's needed- there's no point creating a custom generative carbon fibre chassis with titanium inserts weighing 0.36 grams only to get thrown around by heavier robots!
 
+(1) Drawing the body
+https://www.youtube.com/watch?v=bH-5e4h4fUU&list=PLkHek7ZiQ1lN-IS7YYxnCIRionaxeUwmy&index=5
+
+(2) Drawing the body
+https://youtu.be/J5j0P2gJ0jA?si=y-ynyfNV59hMldzx
+
+(3) Creating generative design on Fusion - Navigate to Structural components 
+https://youtu.be/tTVmAncgNWc?si=16EhPSogSyuSQloT
+
+(4) Generative design addition
+https://youtu.be/tTVmAncgNWc?si=16EhPSogSyuSQloT
+
+(5) Navigating structural loads and constraints
+https://youtu.be/9c7NHFj-JDE?si=PrcSSILe2QUYa7Lj
+
+(6) (Additive) Manufacturing and assigning materials 
+https://youtu.be/qMw8KhQ9DtE?si=7lVDy70mfKkNVp7h
+
+(7) Precheck and Generate your design!
+https://youtu.be/tFvw4hjYwTc?si=Rwi0wispH6vz1ZQZ
+
+(8) Outcome view with all details of your part
+https://youtu.be/uNK7A6M0SWk?si=28iDo5N7f0V8I2az
+
+(9) Export your file
+https://youtu.be/8D_wDlzmzYk?si=RcfoTAhF5pCbIU1s
+
 </details>
