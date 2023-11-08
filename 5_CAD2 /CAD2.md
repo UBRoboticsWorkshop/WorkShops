@@ -240,9 +240,13 @@ Once you have a preferred option, open it and use create body to export it into 
 
 (1) Drawing the body
 https://www.youtube.com/watch?v=bH-5e4h4fUU&list=PLkHek7ZiQ1lN-IS7YYxnCIRionaxeUwmy&index=5
+[![IMAGE ALT TEXT](http://watch?v=bH-5e4h4fUU&list=PLkHek7ZiQ1lN-IS7YYxnCIRionaxeUwmy&index=5)](
+https://www.youtube.com/watch?v=bH-5e4h4fUU&list=PLkHek7ZiQ1lN-IS7YYxnCIRionaxeUwmy&index=5)
+
 
 (2) Drawing the body
 https://youtu.be/J5j0P2gJ0jA?si=y-ynyfNV59hMldzx
+
 
 (3) Creating generative design on Fusion - Navigate to Structural components 
 https://youtu.be/tTVmAncgNWc?si=16EhPSogSyuSQloT
