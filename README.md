@@ -4,7 +4,7 @@
 - Week 4: [Intro to Actuators](2_actuators/README.md)
 - Week 5: [Programming Servos and actuators](./3_programming/index.md)
 - Week 6: [Catchup/Questions](4_questions/index.md)
-- Week 7: [CAD 2 – Effectors](5_CAD2 /CAD2.md)
+- Week 7: [CAD 2 – Effectors](5_CAD2/CAD2.md)
 - Week 8: Communications
 - Week 9: Catchup/Questions
 - Week 10: Competition
