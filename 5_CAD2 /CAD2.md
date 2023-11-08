@@ -59,7 +59,13 @@ Finally, we'll add some fillets to reduce the risk of the grabber snapping off.
 
 </summary>
 
-The dawgs, the grippers
+As before, import the MG996r.
+
+Next, we'll position a block below the servo so that the servo can be bolted to it using two M4 bolts. Extend the block out behind the servo, and add a quad bolt.
+
+Again, we'll construct a plane offset at the distance the servo horn will be at. Two screw holes 15mm apart will allow the screws that come with the servos to connect to the servo horn. Draw a slot to work as the arm, before extruding the arm. We'll also add a hole to the end, to allow for the fitting of a scoop later.
+
+last off, we'll set all of the mounts to the proper tolerances to fit the mounting bolts.
 
 </details>
 
