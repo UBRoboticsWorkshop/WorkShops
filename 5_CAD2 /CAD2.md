@@ -52,14 +52,23 @@ https://www.youtube.com/watch?v=qOHpFVWx1_w&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGy
 
 
 Next, use P to open the project tool and project the mounting features of the servo onto the sketch. A frame to the left of the servo will create a mounting point for the gears. Here, PLA has a low enough coefficient  of friction that the mechanism will work without a bearing- it could be significantly improved by one though.
+https://www.youtube.com/watch?v=bKH9ae1BIsM&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=5
+
+https://www.youtube.com/watch?v=iZQDSNVdOg8&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=6
+
+https://www.youtube.com/watch?v=CSBBlqry2XA&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=3
+
+https://www.youtube.com/watch?v=w8-DKkIAdQY&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=8
 
 Extrude the base, taking care to make sure that the gear teeth do not cut into the extrude. A large column will support the gear, with 0.4mm clearance either side to reduce friction between the two surfaces.
 
 Cut some holes out of the gear to allow screws from the servo horns to be screwed onto it- you may want to cut down the servo horn to reduce the risk of it hitting into the frame.
 
 Add some bars to the gears, to act as the jaws of the gripper. If you choose to use this mechanism, you'll probably want to add some sort of claw to the end of this.
+https://www.youtube.com/watch?v=wsEG29akUN8&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=9
 
 Add a quad bolt to the back of the bracket, so that it can be bolted onto the robot frame. Again, if you choose to use this you might want to mount it differently, to fit with your robot.
+https://www.youtube.com/watch?v=8VeNRC4Q99I&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=2
 
 Finally, we'll add some fillets to reduce the risk of the grabber snapping off.
 
