@@ -18,6 +18,7 @@ Once you've finished adapting these parts for your robot, you can print them off
 This device will grab onto your opponent. If you have very good forward pushing force, you can use this to force them into a pushing match. You could also use this to snag the side of their robot, so that they are unable to push you backwards even if they can generate more force.
 
 Import the MG996r model, and position it for the addition of the cogs.
+https://www.youtube.com/watch?v=2wj7eyW3hcU&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=1
 
 Next, set an offset plane 15.5mm from the mounting tags, as this is how far away the top of the mounting point we will be using here is.
 
