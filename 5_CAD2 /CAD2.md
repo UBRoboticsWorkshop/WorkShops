@@ -18,18 +18,15 @@ Once you've finished adapting these parts for your robot, you can print them off
 This device will grab onto your opponent. If you have very good forward pushing force, you can use this to force them into a pushing match. You could also use this to snag the side of their robot, so that they are unable to push you backwards even if they can generate more force.
 
 Import the MG996r model, and position it for the addition of the cogs.
-
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=2wj7eyW3hcU&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+https://youtu.be/2wj7eyW3hcU?si=bcsD7DykYYbHfhp0
 
 Next, set an offset plane 15.5mm from the mounting tags, as this is how far away the top of the mounting point we will be using here is.
-https://www.youtube.com/watch?v=zykc2e0Vs78&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=10
-
+https://youtu.be/zykc2e0Vs78?si=eN7vk5AsUoTYrlZA
 
 Create a gear using the add-in tab, and input the parameters shown. 
-https://www.youtube.com/watch?v=Kzm5gPF17iA&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=4
-
 https://www.youtube.com/watch?v=qOHpFVWx1_w&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=7
+
+https://youtu.be/qOHpFVWx1_w?si=NIII_bXOV0y_QrSz
 
 <details> <summary> <h4>What do these parameters do?</h4>
 
@@ -54,23 +51,25 @@ https://www.youtube.com/watch?v=qOHpFVWx1_w&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGy
 
 
 Next, use P to open the project tool and project the mounting features of the servo onto the sketch. A frame to the left of the servo will create a mounting point for the gears. Here, PLA has a low enough coefficient  of friction that the mechanism will work without a bearing- it could be significantly improved by one though.
-https://www.youtube.com/watch?v=bKH9ae1BIsM&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=5
+https://youtu.be/bKH9ae1BIsM?si=g2LV_8pje2vsbDzr
 
-https://www.youtube.com/watch?v=iZQDSNVdOg8&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=6
+https://youtu.be/iZQDSNVdOg8?si=jpbXt5hY8GazuX9d
 
-https://www.youtube.com/watch?v=CSBBlqry2XA&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=3
+https://youtu.be/CSBBlqry2XA?si=GRjPxxbY0_54nugp
 
-https://www.youtube.com/watch?v=w8-DKkIAdQY&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=8
+https://youtu.be/wsEG29akUN8?si=8WJuG7SZV9rEHR_G
 
 Extrude the base, taking care to make sure that the gear teeth do not cut into the extrude. A large column will support the gear, with 0.4mm clearance either side to reduce friction between the two surfaces.
 
 Cut some holes out of the gear to allow screws from the servo horns to be screwed onto it- you may want to cut down the servo horn to reduce the risk of it hitting into the frame.
 
 Add some bars to the gears, to act as the jaws of the gripper. If you choose to use this mechanism, you'll probably want to add some sort of claw to the end of this.
-https://www.youtube.com/watch?v=wsEG29akUN8&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=9
+https://youtu.be/wsEG29akUN8?si=8WJuG7SZV9rEHR_G
+
+https://youtu.be/w8-DKkIAdQY?si=Pe0Og_5yftzahavo
 
 Add a quad bolt to the back of the bracket, so that it can be bolted onto the robot frame. Again, if you choose to use this you might want to mount it differently, to fit with your robot.
-https://www.youtube.com/watch?v=8VeNRC4Q99I&list=PLkHek7ZiQ1lP_JcaFEW9UfmYzpKRGyTNa&index=2
+https://youtu.be/8VeNRC4Q99I?si=Vpq9UblngBnlk639
 
 Finally, we'll add some fillets to reduce the risk of the grabber snapping off.
 
