@@ -7,7 +7,7 @@ This is the best time to get creative- an extremely professional and well engine
 
 We'll also be touching on sequencing and control, but we'll have more of a deep dive on that next week.
 
-There are 3 main mechanisms here: grappler, flipper and righter.
+There are 2 mechanisms here: grappler and flipper.
 
 <details> <summary> <h2>Grappler</h2>
 
