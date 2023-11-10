@@ -41,16 +41,19 @@ To simplify further:
 >If you want MOTOR A to move forward, you'd set specific combinations of high and low signals on IN1 and IN2.
 >If you want MOTOR A to move backward, you'd set a different combination of signals on IN1 and IN2.
 >The same logic applies to MOTOR B.
+</details>
 
 ---
 <details>
   <summary>
 
-
  ## 2. CAD
   </summary>
+  
 Not going to lie, you're better off following step-by-step tutorials made by our tech team for this. Please navigate back to 'CAD' 1 & 2 and ask questions if you have any.
-  ---
+</details>
+
+---
 <details>
   <summary>
 
@@ -66,7 +69,6 @@ With this diagram, you can see which pins are PWM-capable. If you're changing th
 *Similarly, connecting the TT motors and ESP32*
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/5329ccad-fe0a-4cde-9923-44b0c615c41e)
 
+</details>
 
 ---
-<details>
-  <summary>
