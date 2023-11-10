@@ -44,7 +44,7 @@ To simplify further:
 
 ---
 <details>
-  <summary>
+ 
 
 
  ## 2. CAD
