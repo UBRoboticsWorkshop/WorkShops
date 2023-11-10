@@ -6,10 +6,10 @@
 - Week 6: [Catchup/Questions](4_questions/index.md)
 - Week 7: [CAD 2 – Effectors](5_CAD/CAD2.md)
 - Week 8: [Communications](./6_comm/README.md)
-- Week 9: Catchup/Questions(./7_summary/)
+- Week 9: Catchup/Questions
 - Week 10: Competition
 
-Summary : [Summary](7_summary//index.md))
+Summary : [Summary](7_summary/7_summary.md)
 
 
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
