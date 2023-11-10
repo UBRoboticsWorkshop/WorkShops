@@ -57,6 +57,11 @@ Not going to lie, you're better off following step-by-step tutorials made by our
  ## 3. Wiring
   </summary>
 
+*Connecting the servo motor and ESP32*
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/8ef94b07-e5d8-4ef0-a16f-a747f9eac959)
+
+With this diagram, you can see which pins are PWM-capable. If you're changing the pins, ensure you change your code too.
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/9fbd100c-51a5-4517-be64-75bc45ff1b1d)
 
 ---
 <details>
