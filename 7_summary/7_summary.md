@@ -42,8 +42,9 @@ To simplify further:
 >If you want MOTOR A to move backward, you'd set a different combination of signals on IN1 and IN2.
 >The same logic applies to MOTOR B.
 
-
-
+---
+<details>
+  <summary>
 
 
  ## 2. CAD
