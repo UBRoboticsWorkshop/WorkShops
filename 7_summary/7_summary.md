@@ -38,9 +38,9 @@ These are the output pins for the two motor channels (A and B).
 The motor channels are where you connect the terminals of your DC motor. Depending on the signals applied to the input pins (IN1, IN2, IN3, IN4), these output pins control the direction and speed of the connected motors.
 To simplify further:
 
-If you want MOTOR A to move forward, you'd set specific combinations of high and low signals on IN1 and IN2.
-If you want MOTOR A to move backward, you'd set a different combination of signals on IN1 and IN2.
-The same logic applies to MOTOR B.
+>If you want MOTOR A to move forward, you'd set specific combinations of high and low signals on IN1 and IN2.
+>If you want MOTOR A to move backward, you'd set a different combination of signals on IN1 and IN2.
+>The same logic applies to MOTOR B.
 
 
 ---
