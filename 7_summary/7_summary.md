@@ -14,11 +14,14 @@
 
 You might recognise this : 
 ![Annotation 2023-11-10 165841](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/74099e9a-1269-4959-b7bf-f463680be36c)
+
 They're kind of the middle man between motors and the control systems we use. Essentially what they do is convert the low-current signals inputted, to hgiher-current which is needed to drive the motors.
 This module in particular (MX1508) can drive 2-Way DC motors ; which is exactly what we're trying to do .It's ideal for battery powered, smaller DC motors.
 
 **Basic Components**
+
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/a496e2bc-2bfb-4f57-a668-c794668e50cf)
+
 
 **Wiring and Connections**
 
@@ -26,19 +29,17 @@ This module in particular (MX1508) can drive 2-Way DC motors ; which is exactly 
 
 Where L = LOGIC LOW, H = LOGIC HIGH
 
-IN1, IN2, IN3, IN4:
+*IN1, IN2, IN3, IN4:*
 These are input pins that control the motor driver.
 You would need to input logic high/low signals here to these pins to determine the motor's behavior. This determines whether the motor rotates forward, backward, or stays still. 
 
-MOTOR A and MOTOR B:
+*MOTOR A and MOTOR B:*
 These are the output pins for the two motor channels (A and B).
 The motor channels are where you connect the terminals of your DC motor. Depending on the signals applied to the input pins (IN1, IN2, IN3, IN4), these output pins control the direction and speed of the connected motors.
 To simplify further:
 
 If you want MOTOR A to move forward, you'd set specific combinations of high and low signals on IN1 and IN2.
-
 If you want MOTOR A to move backward, you'd set a different combination of signals on IN1 and IN2.
-
 The same logic applies to MOTOR B.
 
 
