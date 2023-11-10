@@ -9,7 +9,7 @@
 - Week 9: Catchup/Questions
 - Week 10: Competition
 
-Summary : [Summary](7_summary/7_summary.md)
+Summary of Everything so far : [Summary](7_summary/7_summary.md)
 
 
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
