@@ -1,6 +1,7 @@
 # Summary Workshop
 > [!NOTE]
-> This is a super cool new addition to help you build your robot a bit faster - we've divided this section up into the main topics we've covered previously. This time we've included more visuals to help you follow along better. 
+> This is a super cool new addition to help you build your robot a bit faster - we've divided this section up into the main topics we've covered previously. This time we've included more visuals to help you follow along better.
+
 >Topics have been divided into different drop-downs so just navigate through there for parts you're stuck on
 
 ---
@@ -47,6 +48,7 @@ To simplify further:
 <details>
   <summary>
 
+
  ## 2. CAD
   </summary>
 Not going to lie, you're better off following step-by-step tutorials made by our tech team for this. Please navigate back to 'CAD' 1 & 2 and ask questions if you have any.
@@ -54,12 +56,9 @@ Not going to lie, you're better off following step-by-step tutorials made by our
 <details>
   <summary>
 
- ## 2. Connect to a WiFi
+ ## 3. Wiring
   </summary>
 
-1. `void setup()` is a special function in Arduino programming that is called once when the microcontroller starts. It's used for initializing things that only need to be done once.
-2. `Serial.begin(115200)` is a function call that initializes the serial communication with a baud rate of 115,200. The serial communication is a way for the microcontroller to send and receive data with an external device like a computer.
-</details>
 
 ---
 <details>
