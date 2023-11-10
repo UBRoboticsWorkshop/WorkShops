@@ -9,7 +9,9 @@
 - Week 9: Catchup/Questions 
 - Week 10: Competition
 
-Summary : [Summary](7_summary/README.md)
+Summary : [Summary](7_summary//index.md))
+
+
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
 
 - PPMS: for Makerspace access [https://shorturl.at/fjxO0]
