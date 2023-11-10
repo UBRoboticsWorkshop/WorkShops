@@ -44,7 +44,7 @@ To simplify further:
 
 ---
 <details>
- 
+  <summary>
 
 
  ## 2. CAD
@@ -62,6 +62,10 @@ Not going to lie, you're better off following step-by-step tutorials made by our
 
 With this diagram, you can see which pins are PWM-capable. If you're changing the pins, ensure you change your code too.
 ![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/9fbd100c-51a5-4517-be64-75bc45ff1b1d)
+
+*Similarly, connecting the TT motors and ESP32*
+![image](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/5329ccad-fe0a-4cde-9923-44b0c615c41e)
+
 
 ---
 <details>
