@@ -47,3 +47,22 @@ To simplify further:
 ---
 <details>
   <summary>
+
+
+
+
+
+ ## 2. CAD
+  </summary>
+Not going to lie, you're better off following step-by-step tutorials made by our tech team for this. Please navigate back to 'CAD' 1 & 2 and ask questions if you have any.
+  ---
+<details>
+  <summary>
+
+ ## 3. Wiring
+  </summary>
+
+
+---
+<details>
+  <summary>
