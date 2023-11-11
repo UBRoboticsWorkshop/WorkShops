@@ -1,3 +1,7 @@
+
+![Green Monthly Planner Calender Document Landscape (1)](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/2719a4ae-4476-42eb-a9d7-732c7e09e578)
+
+
 # [UBRobotics Workshops 2023/24](https://ubroboticsworkshop.github.io/WorkShops/)
 
 - Week 3: [CAD](1_cad/README.md)
@@ -16,3 +20,4 @@ Summary of Everything so far : [Summary](7_summary/7_summary.md)
 
 - PPMS: for Makerspace access [https://shorturl.at/fjxO0]
 - Onedrive access : [https://shorturl.at/tuvQ1]
+
