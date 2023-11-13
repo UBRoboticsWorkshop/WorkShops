@@ -182,6 +182,14 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 5. Low overhead: Because UDP lacks the reliability and control features of TCP, it has lower overhead. This makes it faster and more suitable for real-time applications where low latency is crucial.
 
 6. Examples of applications: DNS (Domain Name System), DHCP (Dynamic Host Configuration Protocol), streaming media, online gaming, and VoIP (Voice over Internet Protocol) are examples of protocols that use UDP.
+
+> [!WARNING]
+> 1. Due to security reasons. Chrome cannot send UDP packages. As a result, this method require sorce and sink device.
+> 2. The code is untested. But UDP method will have a better result than TCP(WebSocket).
+
+**Code:** https://github.com/sysytwl/web-gamepad-for-esp32
+
+
 </details>
 
 <details>
@@ -190,8 +198,7 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
   ### 3.2. Use WebSocket(TCP) Method
   </summary>
 
-1. `void setup()` is a special function in Arduino programming that is called once when the microcontroller starts. It's used for initializing things that only need to be done once.
-2. `Serial.begin(115200)` is a function call that initializes the serial communication with a baud rate of 115,200. The serial communication is a way for the microcontroller to send and receive data with an external device like a computer.
+https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
 </details>
 
 </details>
