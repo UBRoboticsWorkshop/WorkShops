@@ -184,7 +184,7 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 6. Examples of applications: DNS (Domain Name System), DHCP (Dynamic Host Configuration Protocol), streaming media, online gaming, and VoIP (Voice over Internet Protocol) are examples of protocols that use UDP.
 
 > [!WARNING]
-> 1. Due to security reasons. Chrome cannot send UDP packages. As a result, this method require sorce and sink device.
+> 1. Due to security reasons. Chrome cannot send UDP packages. As a result, this method require a sorce and a sink device.
 > 2. The code is untested. But UDP method will have a better result than TCP(WebSocket).
 
 **Code:** https://github.com/sysytwl/web-gamepad-for-esp32
