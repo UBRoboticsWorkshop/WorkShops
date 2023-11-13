@@ -163,10 +163,10 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
   ## 3. Data Transfer
   </summary>
 
+> UDP (User Datagram Protocol) and TCP (Transmission Control Protocol) are two of the most widely used protocols in computer networking, providing communication services for different types of applications. Both operate at the transport layer of the Internet Protocol (IP) suite and play crucial roles in facilitating data transfer across networks, but they have distinct characteristics and use cases.
 <details>
   <summary>
 
-> UDP (User Datagram Protocol) and TCP (Transmission Control Protocol) are two of the most widely used protocols in computer networking, providing communication services for different types of applications. Both operate at the transport layer of the Internet Protocol (IP) suite and play crucial roles in facilitating data transfer across networks, but they have distinct characteristics and use cases.
   ### 3.1. Use UDP Method
   </summary>
 
