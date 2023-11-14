@@ -1,5 +1,4 @@
-
-![Green Monthly Planner Calender Document Landscape (1)](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/2719a4ae-4476-42eb-a9d7-732c7e09e578)
+![Sun (1)](https://github.com/UBRoboticsWorkshop/WorkShops/assets/110237339/3d1f12ab-7d9d-4673-bbb3-89d2b9c3e641)
 
 
 # [UBRobotics Workshops 2023/24](https://ubroboticsworkshop.github.io/WorkShops/)
