@@ -160,11 +160,11 @@ void loop() {
 }
 ```
 
-Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials. After uploading the code, open the Serial Monitor to see the connection status.
-</details>
-
 > [!NOTE]
 > test
+
+Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials. After uploading the code, open the Serial Monitor to see the connection status.
+</details>
 
 ---
 <details>
