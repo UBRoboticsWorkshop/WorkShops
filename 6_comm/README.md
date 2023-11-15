@@ -85,9 +85,6 @@ void loop() {
 Replace `"your_AP_SSID"` and `"your_AP_PASSWORD"` with the desired SSID and password for your Access Point. After uploading the code, open the Serial Monitor to see the Access Point details, including the assigned IP address.
 </details>
 
-> [!NOTE]
-> You need have general ideals about:
-
 ---
 <details>
   <summary>
@@ -165,6 +162,9 @@ void loop() {
 
 Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials. After uploading the code, open the Serial Monitor to see the connection status.
 </details>
+
+> [!NOTE]
+> test
 
 ---
 <details>
