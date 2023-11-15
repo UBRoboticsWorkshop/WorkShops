@@ -188,7 +188,7 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 
 > [!NOTE]
 > **Here is the full code that you can use and modify**.
-> https://github.com/sysytwl/web-gamepad-for-esp32
+> (https://github.com/UBRoboticsWorkshop/UDPcontrol)[https://github.com/UBRoboticsWorkshop/UDPcontrol]
 
 </details>
 
