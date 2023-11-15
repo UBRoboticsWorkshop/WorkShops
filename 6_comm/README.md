@@ -93,9 +93,6 @@ Replace `"your_AP_SSID"` and `"your_AP_PASSWORD"` with the desired SSID and pass
   </summary>
 
 > This section explains how to connect an ESP32 to an existing Wi-Fi network. It involves selecting the ESP32 board, including the Wi-Fi library,  setting up Wi-Fi credentials , Defining the setup and optional loop functions.
-
->
->
 > Connecting an ESP32 to a Wi-Fi network involves a few steps. Here's a basic example using the Arduino IDE and the ESP32 library. Make sure you have the ESP32 board support installed in your Arduino IDE.
 
 1. **Select the ESP32 Board:**
