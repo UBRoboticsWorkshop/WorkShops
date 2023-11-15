@@ -85,6 +85,9 @@ void loop() {
 Replace `"your_AP_SSID"` and `"your_AP_PASSWORD"` with the desired SSID and password for your Access Point. After uploading the code, open the Serial Monitor to see the Access Point details, including the assigned IP address.
 </details>
 
+> [!NOTE]
+> You need have general ideals about:
+
 ---
 <details>
   <summary>
