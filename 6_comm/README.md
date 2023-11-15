@@ -221,6 +221,40 @@ In the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. Searc
 
 const char *ssid = "your-ssid";
 const char *password = "your-password";
+// HTML page
+const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Example</title>
+  <script>
+    var socket = new WebSocket('ws://' + window.location.hostname + '/ws');
+
+    socket.onopen = function(event) {
+      console.log('WebSocket connected');
+    };
+
+    socket.onmessage = function(event) {
+      console.log('WebSocket received message: ' + event.data);
+    };
+
+    socket.onclose = function(event) {
+      console.log('WebSocket closed');
+    };
+
+    function sendMessage() {
+      var message = document.getElementById('message').value;
+      socket.send(message);
+    }
+  </script>
+</head>
+<body>
+  <h1>WebSocket Example</h1>
+  <input type="text" id="message" placeholder="Enter message">
+  <button onclick="sendMessage()">Send Message</button>
+</body>
+</html>
+)HTMLHOMEPAGE";
 
 // Create an instance of the server
 AsyncWebServer server(80);
@@ -242,7 +276,12 @@ void setup() {
 
   // Route to serve HTML page
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/index.html", "text/html");
+    request->send(200, "txt/html", "htmlHomePage");
+  });
+
+  // 404
+  server.onNotFound([](AsyncWebServerRequest *request){
+    request->send(404, "text/plain", "File Not Found");
   });
 
   // WebSocket event handler
@@ -269,8 +308,6 @@ void setup() {
   // Add the WebSocket handler to the server
   server.addHandler(&ws);
 
-  // Serve static files from SPIFFS
-  server.serveStatic("/", SPIFFS, "/");
 
   // Start the server
   server.begin();
