@@ -6,21 +6,21 @@
 > - UDP, TCP
 > - WebSocket
 
->BTW, these are all technologies used for network communication. 
->HTML and JavaScript -> web-based user interfaces.
+> BTW, these are all technologies used for network communication. 
+> HTML and JavaScript -> web-based user interfaces.
 >
->UDP (User Datagram Protocol), TCP (Transmission Control Protocol), and WebSocket -> used for communication between devices.
+> UDP (User Datagram Protocol), TCP (Transmission Control Protocol), and WebSocket -> used for communication between devices.
 ---
+
 <details>
   <summary>
 
   ## 1. Setup an AP
   </summary>
 
-
->Why are we doing this?
+> Why are we doing this?
 >
->To understand how ESP32 acts as a Wi-Fi hotspot. It involves selecting the ESP32 board, including the Wi-Fi library, setting up AP credentials, and defining the setup and optional loop functions.
+> To understand how ESP32 acts as a Wi-Fi hotspot. It involves selecting the ESP32 board, including the Wi-Fi library, setting up AP credentials, and defining the setup and optional loop functions.
 
 > Setting up an Access Point (AP) with an ESP32 involves configuring the ESP32 to act as a Wi-Fi hotspot. Here's an example using the Arduino IDE and the ESP32 library:
 
@@ -94,6 +94,7 @@ Replace `"your_AP_SSID"` and `"your_AP_PASSWORD"` with the desired SSID and pass
 
   ## 2. Connect to a WiFi
   </summary>
+
 > This section explains how to connect an ESP32 to an existing Wi-Fi network. It involves selecting the ESP32 board, including the Wi-Fi library,  setting up Wi-Fi credentials , Defining the setup and optional loop functions.
 
 >
@@ -195,12 +196,9 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 
 6. Examples of applications: DNS (Domain Name System), DHCP (Dynamic Host Configuration Protocol), streaming media, online gaming, and VoIP (Voice over Internet Protocol) are examples of protocols that use UDP.
 
-> [!WARNING]
-> 1. Due to security reasons. Chrome cannot send UDP packages. As a result, this method require a sorce and a sink device.
-> 2. The code is untested. But UDP method will have a better result than TCP(WebSocket).
-
-**Code:** https://github.com/sysytwl/web-gamepad-for-esp32
-
+> [!NOTE]
+> Here is the full code that you can use and modify.
+> https://github.com/sysytwl/web-gamepad-for-esp32
 
 </details>
 
@@ -218,15 +216,18 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 
 In the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. Search for and install the following libraries:
 
-- `AsyncTCP` by `me-no-dev`
-- `ESPAsyncWebServer` by `me-no-dev`
+- ESPAsyncWebServer @1.2.7
+- ESPAsyncTCP @1.2.4
+- AsyncTCP @1.1.4
 
 #### 2. Write the Code:
 
 ```cpp
 #include <WiFi.h>
-#include <ESPAsyncWebServer.h>
-#include <AsyncWebSocket.h>
+#include <ESPAsyncWebSrv.h>
+#include <AsyncTCP.h>
+
+
 
 const char *ssid = "your-ssid";
 const char *password = "your-password";
@@ -235,9 +236,12 @@ const char *password = "your-password";
 AsyncWebServer server(80);
 
 // Create an instance of the WebSocket
-AsyncWebSocket ws("/ws");
+AsyncWebServer ws("/ws");
 
 void setup() {
+  // Serial
+  Serial.begin(115200);
+
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -280,6 +284,7 @@ void setup() {
 
   // Start the server
   server.begin();
+  Serial.println("HTTP server started");
 }
 
 void loop() {
@@ -338,7 +343,9 @@ Open the browser's developer console (press F12) to view WebSocket events. Enter
 
 This example demonstrates a simple WebSocket setup on an ESP32. You can expand and customize it based on your specific application requirements.
 
-https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
+> [!NOTE]
+> Here is the full code that you can use and modify.
+> https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
 </details>
 
 </details>
@@ -352,6 +359,125 @@ https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_W
   > This method is very hard.
   </summary>
 
-1. `void setup()` is a special function in Arduino programming that is called once when the microcontroller starts. It's used for initializing things that only need to be done once.
-2. `Serial.begin(115200)` is a function call that initializes the serial communication with a baud rate of 115,200. The serial communication is a way for the microcontroller to send and receive data with an external device like a computer.
+Connecting an ESP32 to an Xbox gamepad via Bluetooth involves using the ESP32's Bluetooth capabilities to establish a connection using the Bluetooth Human Interface Device (HID) profile. The ESP32 can act as a Bluetooth host, and the Xbox gamepad will be the peripheral.
+
+Here's a basic example code to get you started. Note that the exact implementation may depend on the specific Xbox gamepad model, as different models may have different Bluetooth specifications.
+
+```cpp
+#include <BLEDevice.h>
+#include <BLEHIDDevice.h>
+#include <BLEServer.h>
+#include <BLEHID.h>
+
+BLEServer *pServer;
+BLEHIDDevice* hid;
+BLECharacteristic* input;
+
+const uint8_t hidReportDescriptor[] = {
+  0x05, 0x01,                    // Usage Page (Generic Desktop Ctrls)
+  0x09, 0x05,                    // Usage (Game Pad)
+  0xa1, 0x01,                    // Collection (Application)
+  0x85, 0x01,                    //   Report ID (1)
+  0x05, 0x09,                    //   Usage Page (Button)
+  0x19, 0x01,                    //   Usage Minimum (Button 1)
+  0x29, 0x0A,                    //   Usage Maximum (Button 10)
+  0x15, 0x00,                    //   Logical Minimum (0)
+  0x25, 0x01,                    //   Logical Maximum (1)
+  0x95, 0x0A,                    //   Report Count (10)
+  0x75, 0x01,                    //   Report Size (1)
+  0x81, 0x02,                    //   Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+  0x95, 0x06,                    //   Report Count (6)
+  0x75, 0x08,                    //   Report Size (8)
+  0x15, 0x00,                    //   Logical Minimum (0)
+  0x25, 0xFF,                    //   Logical Maximum (255)
+  0x05, 0x01,                    //   Usage Page (Generic Desktop Ctrls)
+  0x09, 0x01,                    //   Usage (Pointer)
+  0xa1, 0x00,                    //   Collection (Physical)
+  0x05, 0x09,                    //     Usage Page (Button)
+  0x19, 0x01,                    //     Usage Minimum (Button 1)
+  0x29, 0x03,                    //     Usage Maximum (Button 3)
+  0x15, 0x00,                    //     Logical Minimum (0)
+  0x25, 0x01,                    //     Logical Maximum (1)
+  0x95, 0x03,                    //     Report Count (3)
+  0x75, 0x01,                    //     Report Size (1)
+  0x81, 0x02,                    //     Input (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position)
+  0x95, 0x01,                    //     Report Count (1)
+  0x75, 0x05,                    //     Report Size (5)
+  0x81, 0x01,                    //     Input (Const,Array,Abs,No Wrap,Linear,Preferred State,No Null Position)
+  0x05, 0x01,                    //     Usage Page (Generic Desktop Ctrls)
+  0x09, 0x30,                    //     Usage (X)
+  0x09, 0x31,                    //     Usage (Y)
+  0x15, 0x81,                    //     Logical Minimum (-127)
+  0x25, 0x7F,                    //     Logical Maximum (127)
+  0x75, 0x08,                    //     Report Size (8)
+  0x95, 0x02,                    //     Report Count (2)
+  0x81, 0x06,                    //     Input (Data,Var,Rel,No Wrap,Linear,Preferred State,No Null Position)
+  0xc0,                          //   End Collection
+  0x09, 0x3c,                    //   Usage (Motion Wakeup)
+  0x05, 0xff,                    //   Usage Page (Reserved 0xFF)
+  0x09, 0x01,                    //   Usage (0x01)
+  0x15, 0x00,                    //   Logical Minimum (0)
+  0x25, 0x01,                    //   Logical Maximum (1)
+  0x75, 0x01,                    //   Report Size (1)
+  0x95, 0x02,                    //   Report Count (2)
+  0xb1, 0x22,                    //   Feature (Data,Var,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+  0x75, 0x06,                    //   Report Size (6)
+  0x95, 0x01,                    //   Report Count (1)
+  0xb1, 0x01,                    //   Feature (Const,Array,Abs,No Wrap,Linear,Preferred State,No Null Position,Non-volatile)
+  0xc0                           // End Collection
+};
+
+void setup() {
+  Serial.begin(115200);
+
+  BLEDevice::init("ESP32 Xbox Gamepad");
+  pServer = BLEDevice::createServer();
+  hid = new BLEHIDDevice(pServer);
+  input = hid->inputReport(1); // report ID 1
+
+  hid->manufacturer()->setValue("ESP32");
+  hid->pnp(0x01, 0xE502, 0xA111, 0x0210);
+  hid->hidInfo(0x00, 0x01);
+
+  BLESecurity *pSecurity = new BLESecurity();
+  pSecurity->setAuthenticationMode(ESP_LE_AUTH_BOND);
+
+  hid->reportMap((uint8_t*)hidReportDescriptor, sizeof(hidReportDescriptor));
+  hid->startServices();
+
+  BLEAdvertising *pAdvertising = pServer->getAdvertising();
+  pAdvertising->setAppearance(HID_GAMEPAD);
+  pAdvertising->addServiceUUID(hid->hidService()->getUUID());
+  pAdvertising->start();
+}
+
+void loop() {
+  // Your main code goes here
+  // Update the input report values based on gamepad state
+  // Example:
+  uint8_t data[10] = {0}; // 10 bytes for the input report
+  data[0] = 1; // Report ID
+  data[1] = digitalRead(BUTTON_A_PIN); // Replace with actual button state
+  data[2] = digitalRead(BUTTON_B_PIN); // Replace with actual button state
+  // Update other button states...
+
+  // Analog stick values (example):
+  int
+
+16_t xAxisValue = analogRead(ANALOG_X_PIN);
+  int16_t yAxisValue = analogRead(ANALOG_Y_PIN);
+  data[3] = map(xAxisValue, 0, 4095, -127, 127); // X-axis
+  data[4] = map(yAxisValue, 0, 4095, -127, 127); // Y-axis
+
+  // Send the input report
+  input->setValue(data, sizeof(data));
+  input->notify();
+
+  delay(10); // Add a small delay to avoid flooding the Bluetooth channel
+}
+```
+
+Replace `BUTTON_A_PIN`, `BUTTON_B_PIN`, `ANALOG_X_PIN`, and `ANALOG_Y_PIN` with the actual pin numbers where your buttons and analog sticks are connected.
+
+This is a basic example, and you may need to adjust it based on your specific Xbox gamepad model and your hardware setup. Always refer to the Bluetooth HID specification and the Xbox gamepad documentation for accurate information about the input reports and HID descriptors for your specific device.
 </details>
