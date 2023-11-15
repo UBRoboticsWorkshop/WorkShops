@@ -10,7 +10,7 @@
 <details>
   <summary>
 
-  ## 1. Setup an AP
+  ## 1. Setup an AP (More power required than 2)
   </summary>
 
 > Why are we doing this?
