@@ -333,8 +333,7 @@ Open the browser's developer console (press F12) to view WebSocket events. Enter
 
 This example demonstrates a simple WebSocket setup on an ESP32. You can expand and customize it based on your specific application requirements.
 
-> [!Note]
-> Here is the full code that you can use and modify.
+> **Here is the full code that you can use and modify.**
 > https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
 
 </details>
@@ -347,9 +346,6 @@ This example demonstrates a simple WebSocket setup on an ESP32. You can expand a
 
   ## 4. Alternative method: Bluetooth
 
-  > [!WARNING]
-  > This method is very hard.
-  
   </summary>
 
 Connecting an ESP32 to an Xbox gamepad via Bluetooth involves using the ESP32's Bluetooth capabilities to establish a connection using the Bluetooth Human Interface Device (HID) profile. The ESP32 can act as a Bluetooth host, and the Xbox gamepad will be the peripheral.
@@ -474,3 +470,6 @@ Replace `BUTTON_A_PIN`, `BUTTON_B_PIN`, `ANALOG_X_PIN`, and `ANALOG_Y_PIN` with 
 
 This is a basic example, and you may need to adjust it based on your specific Xbox gamepad model and your hardware setup. Always refer to the Bluetooth HID specification and the Xbox gamepad documentation for accurate information about the input reports and HID descriptors for your specific device.
 </details>
+
+> [!WARNING]
+> This method is very hard.
