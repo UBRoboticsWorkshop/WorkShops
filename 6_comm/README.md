@@ -229,7 +229,7 @@ const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
 <head>
   <title>WebSocket Example</title>
   <script>
-    var socket = new WebSocket('ws://' + window.location.hostname + '/ws');
+    var socket = new WebSocket('ws://' + window.location.hostname + '/wsCarInput');
 
     socket.onopen = function(event) {
       console.log('WebSocket connected');
