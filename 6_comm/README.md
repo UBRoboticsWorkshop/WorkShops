@@ -17,6 +17,9 @@
   ## 1. Setup an AP
   </summary>
 
+> [!NOTE]
+> test
+
 > Why are we doing this?
 > To understand how ESP32 acts as a Wi-Fi hotspot. It involves selecting the ESP32 board, including the Wi-Fi library, setting up AP credentials, and defining the setup and optional loop functions.
 > Setting up an Access Point (AP) with an ESP32 involves configuring the ESP32 to act as a Wi-Fi hotspot. Here's an example using the Arduino IDE and the ESP32 library:
@@ -159,9 +162,6 @@ void loop() {
   // Your code here (if needed)
 }
 ```
-
-> [!NOTE]
-> test
 
 Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials. After uploading the code, open the Serial Monitor to see the connection status.
 </details>
