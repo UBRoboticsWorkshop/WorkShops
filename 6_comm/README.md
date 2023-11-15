@@ -210,6 +210,134 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
   ### 3.2. Use WebSocket(TCP) Method
   </summary>
 
+> WebSocket is a communication protocol that provides full-duplex communication channels over a single, long-lived TCP connection. It is designed to be implemented in web browsers and web servers but can be used by any client or server application. Unlike traditional web communication protocols like HTTP, which follows a request-response model, WebSocket enables bidirectional communication, allowing data to be sent from both the client to the server and vice versa.
+
+### Steps to setup:
+
+#### 1. Install the Required Libraries:
+
+In the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. Search for and install the following libraries:
+
+- `AsyncTCP` by `me-no-dev`
+- `ESPAsyncWebServer` by `me-no-dev`
+
+#### 2. Write the Code:
+
+```cpp
+#include <WiFi.h>
+#include <ESPAsyncWebServer.h>
+#include <AsyncWebSocket.h>
+
+const char *ssid = "your-ssid";
+const char *password = "your-password";
+
+// Create an instance of the server
+AsyncWebServer server(80);
+
+// Create an instance of the WebSocket
+AsyncWebSocket ws("/ws");
+
+void setup() {
+  // Connect to Wi-Fi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+
+  // Route to serve HTML page
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/index.html", "text/html");
+  });
+
+  // WebSocket event handler
+  ws.onEvent([](AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len){
+    if(type == WS_EVT_CONNECT){
+      Serial.println("WebSocket client connected");
+    } else if(type == WS_EVT_DISCONNECT){
+      Serial.println("WebSocket client disconnected");
+    } else if(type == WS_EVT_DATA){
+      AwsFrameInfo *info = (AwsFrameInfo*)arg;
+      if(info->opcode == WS_TEXT){
+        // Handle text data received from the client
+        String message = "";
+        for(size_t i=0; i < len; i++){
+          message += (char)data[i];
+        }
+        Serial.println("WebSocket received message: " + message);
+        // You can send a response back to the client if needed
+        // client->text("Message received: " + message);
+      }
+    }
+  });
+
+  // Add the WebSocket handler to the server
+  server.addHandler(&ws);
+
+  // Serve static files from SPIFFS
+  server.serveStatic("/", SPIFFS, "/");
+
+  // Start the server
+  server.begin();
+}
+
+void loop() {
+  // Handle WebSocket events
+  ws.cleanupClients();
+}
+```
+
+#### 3. Create the HTML file (index.html):
+
+Create a file named `index.html` and save it in the data folder of your Arduino sketch. The data folder should be in the same directory as your `.ino` file.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Example</title>
+  <script>
+    var socket = new WebSocket('ws://' + window.location.hostname + '/ws');
+
+    socket.onopen = function(event) {
+      console.log('WebSocket connected');
+    };
+
+    socket.onmessage = function(event) {
+      console.log('WebSocket received message: ' + event.data);
+    };
+
+    socket.onclose = function(event) {
+      console.log('WebSocket closed');
+    };
+
+    function sendMessage() {
+      var message = document.getElementById('message').value;
+      socket.send(message);
+    }
+  </script>
+</head>
+<body>
+  <h1>WebSocket Example</h1>
+  <input type="text" id="message" placeholder="Enter message">
+  <button onclick="sendMessage()">Send Message</button>
+</body>
+</html>
+```
+
+#### 4. Upload the Code:
+
+Connect your ESP32 to your computer, select the correct board and port in the Arduino IDE, and upload the code.
+
+#### 5. Test:
+
+Open the Serial Monitor in the Arduino IDE to view the ESP32's serial output. Once the ESP32 is connected to Wi-Fi, it will print an IP address. Open a web browser and navigate to that IP address. You should see the HTML page with a text input and a button.
+
+Open the browser's developer console (press F12) to view WebSocket events. Enter a message in the text input, click "Send Message," and observe the WebSocket events in the console.
+
+This example demonstrates a simple WebSocket setup on an ESP32. You can expand and customize it based on your specific application requirements.
+
 https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
 </details>
 
