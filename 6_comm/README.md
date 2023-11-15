@@ -187,7 +187,7 @@ Replace `"your_SSID"` and `"your_PASSWORD"` with your Wi-Fi network credentials.
 6. Examples of applications: DNS (Domain Name System), DHCP (Dynamic Host Configuration Protocol), streaming media, online gaming, and VoIP (Voice over Internet Protocol) are examples of protocols that use UDP.
 
 > [!NOTE]
-> Here is the full code that you can use and modify.
+> **Here is the full code that you can use and modify**.
 > https://github.com/sysytwl/web-gamepad-for-esp32
 
 </details>
@@ -217,11 +217,12 @@ In the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. Searc
 #include <ESPAsyncWebSrv.h>
 #include <AsyncTCP.h>
 
+#include <iostream>
+#include <sstream>
 
 
-const char *ssid = "your-ssid";
+const char *host = "your-ssid";
 const char *password = "your-password";
-// HTML page
 const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
 <!DOCTYPE html>
 <html>
@@ -260,109 +261,79 @@ const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
 AsyncWebServer server(80);
 
 // Create an instance of the WebSocket
-AsyncWebServer ws("/ws");
+AsyncWebSocket wsCarInput("/CarInput");
+
+void onCarInputWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type,void *arg, uint8_t *data, size_t len){
+  switch (type) {
+    case WS_EVT_CONNECT:
+      Serial.printf("WebSocket client #%u connected from %s\n", client->id(), client->remoteIP().toString().c_str());
+      break;
+    case WS_EVT_DISCONNECT:
+      Serial.printf("WebSocket client #%u disconnected\n", client->id());
+      break;
+    case WS_EVT_DATA:
+      AwsFrameInfo *info;
+      info = (AwsFrameInfo*)arg;
+      if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT) {
+        //std::string myData = "";
+        //myData.assign((char *)data, len);
+        //std::istringstream ss(myData);
+        //std::string key, value;
+        //std::getline(ss, key, ',');
+        //std::getline(ss, value, ',');
+        //Serial.printf("Key [%s] Value[%s]\n", key.c_str(), value.c_str()); 
+        //int valueInt = atoi(value.c_str());     
+        Serial.printf("ws[%s][%u] %s-message[%llu]: ", server->url(), client->id(), (info->opcode == WS_TEXT)?"text":"binary", info->len);
+      }
+      break;
+    case WS_EVT_PONG:
+      Serial.printf("ws[%s][%u] pong[%u]: %s\n", server->url(), client->id(), len, (len)?(char*)data:"");
+      break;
+    case WS_EVT_ERROR:
+      Serial.printf("ws[%s][%u] error(%u): %s\n", server->url(), client->id(), *((uint16_t*)arg), (char*)data);
+      break;
+    default:
+      break;  
+  }
+}
 
 void setup() {
-  // Serial
   Serial.begin(115200);
+  
+  // AP name,passwd
+  WiFi.softAP(host, password);
+  WiFi.setTxPower(WIFI_POWER_MINUS_1dBm);
 
-  // Connect to Wi-Fi
-  WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting to WiFi...");
-  }
-  Serial.println("Connected to WiFi");
+  
+  IPAddress IP = WiFi.softAPIP();
+  Serial.print("AP IP address: ");
+  Serial.println(IP);
 
-  // Route to serve HTML page
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(200, "txt/html", "htmlHomePage");
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
+    request->send_P(200, "text/html", htmlHomePage);
   });
-
-  // 404
   server.onNotFound([](AsyncWebServerRequest *request){
     request->send(404, "text/plain", "File Not Found");
   });
+      
+  wsCarInput.onEvent(onCarInputWebSocketEvent);
+  server.addHandler(&wsCarInput);
 
-  // WebSocket event handler
-  ws.onEvent([](AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len){
-    if(type == WS_EVT_CONNECT){
-      Serial.println("WebSocket client connected");
-    } else if(type == WS_EVT_DISCONNECT){
-      Serial.println("WebSocket client disconnected");
-    } else if(type == WS_EVT_DATA){
-      AwsFrameInfo *info = (AwsFrameInfo*)arg;
-      if(info->opcode == WS_TEXT){
-        // Handle text data received from the client
-        String message = "";
-        for(size_t i=0; i < len; i++){
-          message += (char)data[i];
-        }
-        Serial.println("WebSocket received message: " + message);
-        // You can send a response back to the client if needed
-        // client->text("Message received: " + message);
-      }
-    }
-  });
-
-  // Add the WebSocket handler to the server
-  server.addHandler(&ws);
-
-
-  // Start the server
   server.begin();
   Serial.println("HTTP server started");
 }
 
 void loop() {
   // Handle WebSocket events
-  ws.cleanupClients();
+  wsCarInput.cleanupClients();
 }
 ```
 
-#### 3. Create the HTML file (index.html):
-
-Create a file named `index.html` and save it in the data folder of your Arduino sketch. The data folder should be in the same directory as your `.ino` file.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>WebSocket Example</title>
-  <script>
-    var socket = new WebSocket('ws://' + window.location.hostname + '/ws');
-
-    socket.onopen = function(event) {
-      console.log('WebSocket connected');
-    };
-
-    socket.onmessage = function(event) {
-      console.log('WebSocket received message: ' + event.data);
-    };
-
-    socket.onclose = function(event) {
-      console.log('WebSocket closed');
-    };
-
-    function sendMessage() {
-      var message = document.getElementById('message').value;
-      socket.send(message);
-    }
-  </script>
-</head>
-<body>
-  <h1>WebSocket Example</h1>
-  <input type="text" id="message" placeholder="Enter message">
-  <button onclick="sendMessage()">Send Message</button>
-</body>
-</html>
-```
-
-#### 4. Upload the Code:
+#### 3. Upload the Code:
 
 Connect your ESP32 to your computer, select the correct board and port in the Arduino IDE, and upload the code.
 
-#### 5. Test:
+#### 4. Test:
 
 Open the Serial Monitor in the Arduino IDE to view the ESP32's serial output. Once the ESP32 is connected to Wi-Fi, it will print an IP address. Open a web browser and navigate to that IP address. You should see the HTML page with a text input and a button.
 
@@ -388,6 +359,8 @@ This example demonstrates a simple WebSocket setup on an ESP32. You can expand a
 Connecting an ESP32 to an Xbox gamepad via Bluetooth involves using the ESP32's Bluetooth capabilities to establish a connection using the Bluetooth Human Interface Device (HID) profile. The ESP32 can act as a Bluetooth host, and the Xbox gamepad will be the peripheral.
 
 Here's a basic example code to get you started. Note that the exact implementation may depend on the specific Xbox gamepad model, as different models may have different Bluetooth specifications.
+
+> the code is not tested
 
 ```cpp
 #include <BLEDevice.h>
