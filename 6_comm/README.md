@@ -13,8 +13,6 @@
   ## 1. Setup an AP
   </summary>
 
-> [!NOTE]
-> test
 > Why are we doing this?
 > To understand how ESP32 acts as a Wi-Fi hotspot. It involves selecting the ESP32 board, including the Wi-Fi library, setting up AP credentials, and defining the setup and optional loop functions.
 > Setting up an Access Point (AP) with an ESP32 involves configuring the ESP32 to act as a Wi-Fi hotspot. Here's an example using the Arduino IDE and the ESP32 library:
@@ -335,9 +333,10 @@ Open the browser's developer console (press F12) to view WebSocket events. Enter
 
 This example demonstrates a simple WebSocket setup on an ESP32. You can expand and customize it based on your specific application requirements.
 
-> [!NOTE]
+> [!Note]
 > Here is the full code that you can use and modify.
 > https://github.com/sysytwl/web-gamepad-for-esp32/tree/UoBRobotics_SumoRobotics_WebSocket
+
 </details>
 
 </details>
@@ -347,8 +346,10 @@ This example demonstrates a simple WebSocket setup on an ESP32. You can expand a
   <summary>
 
   ## 4. Alternative method: Bluetooth
+
   > [!WARNING]
   > This method is very hard.
+  
   </summary>
 
 Connecting an ESP32 to an Xbox gamepad via Bluetooth involves using the ESP32's Bluetooth capabilities to establish a connection using the Bluetooth Human Interface Device (HID) profile. The ESP32 can act as a Bluetooth host, and the Xbox gamepad will be the peripheral.
