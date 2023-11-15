@@ -8,10 +8,9 @@
 
 > BTW, these are all technologies used for network communication. 
 > HTML and JavaScript -> web-based user interfaces.
->
 > UDP (User Datagram Protocol), TCP (Transmission Control Protocol), and WebSocket -> used for communication between devices.
----
 
+---
 <details>
   <summary>
 
@@ -19,9 +18,7 @@
   </summary>
 
 > Why are we doing this?
->
 > To understand how ESP32 acts as a Wi-Fi hotspot. It involves selecting the ESP32 board, including the Wi-Fi library, setting up AP credentials, and defining the setup and optional loop functions.
-
 > Setting up an Access Point (AP) with an ESP32 involves configuring the ESP32 to act as a Wi-Fi hotspot. Here's an example using the Arduino IDE and the ESP32 library:
 
 1. **Select the ESP32 Board:**
