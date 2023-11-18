@@ -3,9 +3,7 @@
 > This is a super cool new addition to help you build your robot a bit faster - we've divided this section up into the main topics we've covered previously. This time we've included more visuals to help you follow along better.
 >Topics have been divided into different drop-downs so just navigate through there for parts you're stuck on
 
-/*Here is a video showing the A to Z of the robot assembly : 
-https://www.youtube.com/watch?v=Bs8_F03P2fw
-Refer to this to assemble your robot. If you have specific questions / confused about the codes etc, refer back to previous workshops.*/
+If you have specific questions / confused about the codes etc, refer back to previous workshops.
 
 ---
 <details>
