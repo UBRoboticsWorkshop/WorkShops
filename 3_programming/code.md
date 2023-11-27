@@ -67,7 +67,7 @@ public:
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(_pin, channel);
   }
 
   Servo(int _pin, int _channel){
@@ -77,7 +77,7 @@ public:
     pin = _pin;
     channel = _channel;
     ledcSetup(channel, frequency, resolution);
-    ledcAttachPin(27, channel);
+    ledcAttachPin(_pin, channel);
   }
 
   void writeAngle(int _angle){
